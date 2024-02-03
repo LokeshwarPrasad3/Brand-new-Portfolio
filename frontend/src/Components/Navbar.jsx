@@ -3,11 +3,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import MagicNavbar from "./MagicNavbar";
 
 const Navbar = () => {
   // state which store current width of window
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showResNavbar, setShowResNavbar] = useState(false);
+  const [showMagicNavbar, setShowMagicNavbar] = useState(false);
 
   //
   const toggleResNavbar = () => {
@@ -50,9 +52,9 @@ const Navbar = () => {
           </Link> */}
           <Link
             to="/"
-            className="heading_name pl-2 text-[2rem] font-bree font-semibold text-gray-300 cursor-pointer"
+            className="heading_name pl-2 text-[1.4rem] md:text-[2rem] font-bree font-semibold text-gray-300 cursor-pointer"
           >
-            <span className="text-[#2196f3]">My</span>Portfolio_
+            <span className="text-[#2196f3] ">My</span>Portfolio_
           </Link>
         </header>
         {/* show navbar-menu */}
@@ -87,13 +89,28 @@ const Navbar = () => {
                 AboutUs
               </Link>
             </li>
+            {windowWidth < 800 && (
+              <li className="nav_list">
+                <Link
+                  onClick={() => {
+                    setShowResNavbar(!showResNavbar);
+                    setShowMagicNavbar(true);
+                  }}
+                  className="nav_link bg-gradient-to-r from-red-500 via-blue-500 to-yellow-500 text-white p-4 "
+                  to="#"
+                >
+                  Enable Magic Navbar
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
         <div
           className={`menu_button ${
-            windowWidth < 800 ? "block" : "hidden"
+            windowWidth < 800 && !showMagicNavbar ? "block" : "hidden"
           } flex justify-center items-center`}
         >
+          {/* show basic menu for responsive design */}
           {showResNavbar ? (
             <CloseIcon
               onClick={toggleResNavbar}
@@ -109,6 +126,8 @@ const Navbar = () => {
           )}
         </div>
       </nav>
+      {/* show magic navbar when enable */}
+      {windowWidth < 800 && showMagicNavbar && <MagicNavbar/>  }
     </>
   );
 };

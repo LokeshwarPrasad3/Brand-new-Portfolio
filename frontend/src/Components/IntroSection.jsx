@@ -29,8 +29,8 @@ const IntroSection = () => {
   return (
     <>
       <div className="home_intro_container text-gray-300 font-signika flex w-full justify-center items-center h-[80vh] ">
-        <div className="intro_info_section flex flex-col w-[40%] gap-6">
-          <div className="greet">
+        <div className="intro_info_section flex flex-col w-[40%] gap-3 md:gap-6">
+          <div className="greet relative md:top-0 top-1 ">
             <h3 className="hey text-3xl font-bree"> Hey ,</h3>
           </div>
           <div className="anime_name">
@@ -40,7 +40,7 @@ const IntroSection = () => {
             </h2>
           </div>
           <div className="intro_para w-full">
-            <p className="para text-xl md:w-[90%] font-overpass">
+            <p className="para text-xl md:w-[90%] font-signika">
               My name is <b>Lokeshwar Prasad Dewangan.</b> I am Full Stack
               Developer and pursuing my 3rd year of BTech Computer Science
               branch. I am learner & spend more time on Computer technologies.
@@ -56,7 +56,7 @@ const IntroSection = () => {
           </div>
         </div>
         <div className="image_section w-auto">
-          <div class="frame w-full "></div>
+          <div className="frame w-full "></div>
         </div>
       </div>
     </>
