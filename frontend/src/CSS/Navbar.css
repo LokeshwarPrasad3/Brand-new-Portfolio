@@ -31,3 +31,17 @@ font-weight: 500;
     margin: 0.6rem 0;
   }
 }
+
+/* animation for light icon */
+.light_mode_icon{
+  animation: rotateRound 3s linear infinite;
+}
+
+@keyframes rotateRound{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

@@ -14,8 +14,6 @@ const MagicNavbar = () => {
     { id: 5, icon: "apps", text: "Skills", route: "#" },
   ];
 
-  // <ion-icon name="sunny"></ion-icon>;
-
   const handleClick = (id) => {
     setActiveItem(id);
   };

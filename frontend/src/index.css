@@ -18,5 +18,10 @@
   @apply list-none flex justify-center items-center;
 }
 .main_page_button{
-  @apply bg-green-700 px-3 py-[1px] text-xl shadow-sm custom-transition rounded shadow-blue-300 opacity-90 hover:bg-green-600 text-gray-100 ;
+  @apply bg-green-700 px-3 py-[1px] text-[1.2rem] shadow-sm custom-transition rounded shadow-blue-300 opacity-90 hover:bg-green-600 text-gray-100 ;
+}
+
+::selection{
+  color: white;
+  background-color: rgb(44, 135, 138);
 }

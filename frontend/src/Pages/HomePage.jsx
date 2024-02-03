@@ -1,11 +1,10 @@
 import IntroSection from "../Components/IntroSection";
-import Navbar from "../Components/Navbar"
+import Navbar from "../Components/Navbar";
 
 const HomePage = () => {
   return (
     <>
-      <Navbar />
-      <IntroSection/>
+      <IntroSection />
     </>
   );
 };

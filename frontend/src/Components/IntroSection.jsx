@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import "../CSS/ImageFrame.css";
-import anime from "animejs";
+import { Link } from "react-router-dom";
 
 
 const IntroSection = () => {
@@ -46,19 +46,21 @@ const IntroSection = () => {
               branch. I am learner & spend more time on Computer technologies.
             </p>
           </div>
-          <div className="intro_buttons flex gap-8">
-            <button className="hire_me_button main_page_button button">
+          <div className="intro_buttons flex gap-8 relative top-4">
+            <Link to="/contact" className="hire_me_button main_page_button button">
               Hire Me
-            </button>
-            <button className="intro_contact_button main_page_button button">
+            </Link>
+            <Link to="/contact" className="intro_contact_button main_page_button button">
               Message
-            </button>
+            </Link>
           </div>
         </div>
         <div className="image_section w-auto">
           <div className="frame w-full "></div>
         </div>
       </div>
+      <hr className="opacity-10" />
+      
     </>
   );
 };

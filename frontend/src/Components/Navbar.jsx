@@ -4,12 +4,15 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MagicNavbar from "./MagicNavbar";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const Navbar = () => {
   // state which store current width of window
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showResNavbar, setShowResNavbar] = useState(false);
   const [showMagicNavbar, setShowMagicNavbar] = useState(false);
+  const [lightMode, setLightMode] = useState(false);
 
   //
   const toggleResNavbar = () => {
@@ -50,6 +53,20 @@ const Navbar = () => {
               className="h-12 w-12 rounded-full"
             />
           </Link> */}
+          {/* dark/light mode */}
+          <div className="bg-mode">
+            {lightMode ? (
+              <DarkModeIcon
+                onClick={() => setLightMode(!lightMode)}
+                className="cursor-pointer hover:text-slate-300 custom-transition "
+              />
+            ) : (
+              <LightModeIcon
+                onClick={() => setLightMode(!lightMode)}
+                className="light_mode_icon cursor-pointer hover:text-slate-300 custom-transition "
+              />
+            )}
+          </div>
           <Link
             to="/"
             className="heading_name pl-2 text-[1.4rem] md:text-[2rem] font-bree font-semibold text-gray-300 cursor-pointer"
@@ -74,13 +91,15 @@ const Navbar = () => {
               <Link
                 onClick={toggleResNavbar}
                 className="nav_link"
-                to="/services"
-              >
-                Services
+                to="/projects"
+                >
+                Projects
               </Link>
             </li>
             <li className="nav_list">
-              <Link className="nav_link" to="/contact">
+              <Link
+                onClick={toggleResNavbar}
+                className="nav_link" to="/contact">
                 ContactUs
               </Link>
             </li>
@@ -127,7 +146,7 @@ const Navbar = () => {
         </div>
       </nav>
       {/* show magic navbar when enable */}
-      {windowWidth < 800 && showMagicNavbar && <MagicNavbar/>  }
+      {windowWidth < 800 && showMagicNavbar && <MagicNavbar />}
     </>
   );
 };
