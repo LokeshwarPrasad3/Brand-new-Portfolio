@@ -1,0 +1,118 @@
+.frame {
+  height: 28rem;
+  width: 20rem;
+  background-color: #eee;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto; /* Center the frame horizontally */
+
+  /* Specify the animation shorthand property with multiple animations */
+  animation: animateFrame 11s infinite, animateMen 8s ease-in-out infinite;
+}
+
+/* Define keyframes for smooth image transition and animation */
+@keyframes animateFrame {
+  0%, 20% {
+    background-image: url("./transition-image/image-1.jpg");
+  }
+  33.33%, 53.33% {
+    background-image: url("./transition-image/image-2.jpg");
+  }
+  66.66%, 86.66% {
+    background-image: url("./transition-image/image-3.jpg");
+  }
+  100% {
+    background-image: url("./transition-image/image-1.jpg");
+  }
+}
+
+@keyframes animateMen {
+  0%, 100% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+@media (max-width: 1300px) {
+  .home_intro_container {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  .intro_info_section {
+    width: 70%;
+  }
+  .image_section {
+    width: auto;
+  }
+
+  .frame {
+    height: 29rem;
+    width: 21rem;
+  }
+}
+/* font size of introduction */
+@media (max-width: 940px) {
+  .hey {
+    font-size: 1.8rem;
+  }
+  .anime_text {
+    font-size: 2.8rem;
+  }
+  .para {
+    font-size: 1.2rem;
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .frame {
+    height: 25rem;
+    width: 18rem;
+  }
+}
+
+/* make upper lower content */
+@media (max-width: 760px) {
+  .home_intro_container {
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    padding: 2rem;
+    height: 100%;
+    gap: 2rem;
+  }
+  .intro_info_section {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .frame {
+    height: 20rem;
+    width: 15rem;
+  }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 576px) {
+  .hey {
+    font-size: 1.3rem;
+  }
+  .anime_text {
+    font-size: 2rem;
+  }
+  .para {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .frame {
+    background-position: top;
+  background-size: cover;
+
+    height: 20rem;
+    width: 19rem;
+  }
+}

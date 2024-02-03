@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "signika negative";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.custom-transition{
+  @apply transition-all duration-300 ease-in ;
+}
+.nav_link {
+  @apply text-lg no-underline px-2 py-[1px] cursor-pointer text-gray-300 rounded-md transition-all duration-300 ease-in hover:bg-slate-800 hover:text-white;
+}
+.nav_list {
+  @apply list-none flex justify-center items-center;
+}
+.main_page_button{
+  @apply bg-green-700 px-3 py-[1px] text-xl shadow-sm custom-transition rounded shadow-blue-300 opacity-90 hover:bg-green-600 text-gray-100 ;
+}
