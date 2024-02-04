@@ -82,7 +82,7 @@
     flex-wrap: wrap-reverse;
     padding: 2rem;
     height: 100%;
-    gap: 2rem;
+    gap: 1rem;
   }
   .intro_info_section {
     width: 100%;

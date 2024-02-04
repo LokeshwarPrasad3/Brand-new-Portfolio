@@ -4,10 +4,10 @@ import CodeIcon from "@mui/icons-material/Code";
 const ProjectBox = ({ project }) => {
   return (
     <>
-      <div className="project_card flex flex-col text-white font-overpass w-80 h-64 bg-slate-800 shadow-sm shadow-blue-700 ">
-        <div className="project_image_container w-80 h-44 flex justify-center items-center">
+      <div className="project_card flex flex-col text-white font-overpass w-[22rem] h-64 bg-slate-800 shadow-sm shadow-blue-700 ">
+        <div className="project_image_container w-[22rem] h-48 flex justify-center items-center">
           <img
-            className="project_image w-80 h-44 "
+            className="project_image w-[22rem] h-44 "
             src={project.src}
             alt={project.title}
             // style={{ objectFit: "cover" }}

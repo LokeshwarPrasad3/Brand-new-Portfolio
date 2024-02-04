@@ -59,8 +59,6 @@ const IntroSection = () => {
           <div className="frame w-full "></div>
         </div>
       </div>
-      <hr className="opacity-10" />
-      
     </>
   );
 };

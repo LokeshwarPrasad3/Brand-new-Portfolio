@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import "../CSS/MagicNavbar.css";
 import React, { useState } from "react";
-import MessageIcon from "@mui/icons-material/Message";
 
 const MagicNavbar = () => {
   const [activeItem, setActiveItem] = useState(1);
 
   const listItems = [
-    { id: 1, icon: "home-outline", text: "Home", route: "#" },
-    { id: 2, icon: "person-outline", text: "About", route: "#" },
-    { id: 3, icon: "chatbubble-outline", text: "Contact", route: "#" },
-    { id: 4, icon: "code", text: "Project", route: "#" },
-    { id: 5, icon: "apps", text: "Skills", route: "#" },
+    { id: 1, icon: "home-outline", text: "Home", route: "/" },
+    { id: 4, icon: "code", text: "Project", route: "/projects" },
+    { id: 5, icon: "apps", text: "Skills", route: "/skills" },
+    { id: 3, icon: "chatbubble-outline", text: "Contact", route: "/contact" },
+    { id: 2, icon: "person-outline", text: "About", route: "/about" },
   ];
 
   const handleClick = (id) => {

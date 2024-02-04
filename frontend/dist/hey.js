@@ -12,7 +12,7 @@ function getAllImageFiles(directory) {
 }
 
 // Specify the directory path
-const directoryPath = './public/projects';
+const directoryPath = './public/skills';
 
 // Get image files
 const imageFiles = getAllImageFiles(directoryPath);

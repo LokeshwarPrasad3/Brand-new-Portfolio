@@ -3,7 +3,8 @@ import "../CSS/MessageSendingForm.css";
 
 const MessageSendingForm = () => {
 
-  const submitMessage = () => {
+  const submitMessage = (e) => {
+    e.preventDefault();
     toast.success("Successfully Sent", {autoClose: 3000})
   }
 

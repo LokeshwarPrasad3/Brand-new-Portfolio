@@ -6,7 +6,7 @@
   align-items: center;
   width: 100%;
   position: fixed;
-  bottom: 0.3rem;
+  bottom: 0;
 }
 .navigation {
   position: relative;
