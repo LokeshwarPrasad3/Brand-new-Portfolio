@@ -2,21 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  /* font-family: "signika negative"; */
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+html {
+  scroll-behavior: smooth;
 }
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh; /* Set a minimum height of 100% of the viewport height */
-  display: flex;
-  flex-direction: column;
-}
-.custom-transition{
-  @apply transition-all duration-300 ease-in ;
+.custom-transition {
+  @apply transition-all duration-300 ease-in;
 }
 .nav_link {
   @apply text-lg no-underline px-2 py-[1px] cursor-pointer text-gray-300 rounded-md transition-all duration-300 ease-in hover:bg-slate-800 hover:text-white;
@@ -24,16 +14,16 @@ body {
 .nav_list {
   @apply list-none flex justify-center items-center;
 }
-.main_page_button{
-  @apply bg-green-700 px-3 py-[1px] text-[1.2rem] shadow-sm custom-transition rounded shadow-blue-300 opacity-90 hover:bg-green-600 text-gray-100 ;
+.main_page_button {
+  @apply bg-green-700 px-3 py-[1px] text-[1.2rem] shadow-sm custom-transition rounded shadow-blue-300 opacity-90 hover:bg-green-600 text-gray-100;
 }
 
-::selection{
+::selection {
   color: white;
   background-color: rgb(44, 135, 138);
 }
 
 /* skills page css */
-.skills_box_class{
+.skills_box_class {
   @apply flex pt-5 justify-center items-center flex-col w-full md:w-[60%];
 }

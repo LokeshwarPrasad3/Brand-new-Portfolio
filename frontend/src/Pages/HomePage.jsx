@@ -3,9 +3,9 @@ import Navbar from "../Components/Navbar";
 
 const HomePage = () => {
   return (
-    <>
+    <div>
       <IntroSection />
-    </>
+    </div>
   );
 };
 

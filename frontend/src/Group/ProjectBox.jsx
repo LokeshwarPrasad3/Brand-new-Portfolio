@@ -10,12 +10,12 @@ const ProjectBox = ({ project }) => {
             className="project_image w-[22rem] h-44 "
             src={project.src}
             alt={project.title}
-            // style={{ objectFit: "cover" }}
+            loading="lazy"
           />
         </div>
         <div className="flex flex-col justify-center items-center">
           <p className="text-center text-xl font-overpass pt-2 pb-1 ">
-            {project.title.slice(0,25)}
+            {project.title.slice(0, 25)}
           </p>
           <hr className="opacity-20 w-5/6 " />
           <div className="code_info flex justify-between w-full px-8 py-2">

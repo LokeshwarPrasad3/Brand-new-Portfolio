@@ -7,6 +7,7 @@ const SkillsBox = ({ data }) => {
             className="h-28 object-cover w-28 rounded-full"
             src={data.src}
             alt={data.title}
+            loading="lazy"
           />
         </div>
         <div className="name_skills">

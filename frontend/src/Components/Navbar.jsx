@@ -92,23 +92,21 @@ const Navbar = () => {
                 onClick={toggleResNavbar}
                 className="nav_link"
                 to="/projects"
-                >
+              >
                 Projects
               </Link>
             </li>
             <li className="nav_list">
-              <Link
-                onClick={toggleResNavbar}
-                className="nav_link"
-                to="/skills"
-                >
+              <Link onClick={toggleResNavbar} className="nav_link" to="/skills">
                 Skills
               </Link>
             </li>
             <li className="nav_list">
               <Link
                 onClick={toggleResNavbar}
-                className="nav_link" to="/contact">
+                className="nav_link"
+                to="/contact"
+              >
                 ContactUs
               </Link>
             </li>
@@ -153,6 +151,23 @@ const Navbar = () => {
             />
           )}
         </div>
+        {/* show image when enable magic  navbar than space of menu icon */}
+        {windowWidth < 800 && showMagicNavbar && (
+          <Link
+            to="/"
+            onClick={() => {
+              setShowResNavbar(!showResNavbar);
+              setShowMagicNavbar(false);
+            }}
+            className="no-underline flex justify-center align-center"
+          >
+            <img
+              src="/images/best.jpg"
+              alt="Lokeshwar"
+              className="h-8 w-8 rounded-full"
+            />
+          </Link>
+        )}
       </nav>
       {/* show magic navbar when enable */}
       {windowWidth < 800 && showMagicNavbar && <MagicNavbar />}
