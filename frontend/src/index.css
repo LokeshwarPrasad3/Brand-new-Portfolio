@@ -9,7 +9,7 @@ html {
   @apply transition-all duration-300 ease-in;
 }
 .nav_link {
-  @apply text-lg no-underline px-2 py-[1px] cursor-pointer rounded-md transition-all duration-300 ease-in;
+  @apply text-lg no-underline px-2 py-[1px] cursor-pointer rounded-md transition-all duration-300 ease-in hover:bg-slate-800 hover:text-white;
 }
 .nav_list {
   @apply list-none flex justify-center items-center;
