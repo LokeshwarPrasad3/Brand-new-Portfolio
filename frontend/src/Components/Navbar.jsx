@@ -13,6 +13,7 @@ const Navbar = () => {
   const [showResNavbar, setShowResNavbar] = useState(false);
   const [showMagicNavbar, setShowMagicNavbar] = useState(false);
   const [lightMode, setLightMode] = useState(false);
+  const [currentPathname, setCurrentPathname] = useState("/");
 
   //
   const toggleResNavbar = () => {
@@ -20,7 +21,14 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // function set current innerWidth
+    // get current path and highlight navbar menu
+    const pathname = window.location.pathname;
+    setCurrentPathname(pathname);
+    console.log(pathname);
+  }, [window.location.pathname]);
+
+  useEffect(() => {
+  // function set current innerWidth
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
       console.log(window.innerWidth);
@@ -83,35 +91,70 @@ const Navbar = () => {
         >
           <ul id="nav_ul" className="flex font-signika gap-3">
             <li className="nav_list">
-              <Link onClick={toggleResNavbar} className="nav_link" to="/">
+              <Link
+                onClick={toggleResNavbar}
+                className={`nav_link 
+              ${
+                currentPathname === "/"
+                  ? "bg-slate-800 text-white"
+                  : "text-gray-300 bg-slate-950"
+              } `}
+                to="/"
+              >
                 Home
               </Link>
             </li>
             <li className="nav_list">
               <Link
                 onClick={toggleResNavbar}
-                className="nav_link"
+                className={`nav_link 
+                ${
+                  currentPathname === "/projects"
+                    ? "bg-slate-800 text-white"
+                    : "text-gray-300 bg-slate-950"
+                } `}
                 to="/projects"
               >
                 Projects
               </Link>
             </li>
             <li className="nav_list">
-              <Link onClick={toggleResNavbar} className="nav_link" to="/skills">
+              <Link
+                onClick={toggleResNavbar}
+                className={`nav_link 
+              ${
+                currentPathname === "/skills"
+                  ? "bg-slate-800 text-white"
+                  : "text-gray-300 bg-slate-950"
+              } `}
+                to="/skills"
+              >
                 Skills
               </Link>
             </li>
             <li className="nav_list">
               <Link
                 onClick={toggleResNavbar}
-                className="nav_link"
+                className={`nav_link ${
+                  currentPathname === "/contact"
+                    ? "bg-slate-800 text-white"
+                    : "text-gray-300 bg-slate-950"
+                } `}
                 to="/contact"
               >
                 ContactUs
               </Link>
             </li>
             <li className="nav_list">
-              <Link onClick={toggleResNavbar} className="nav_link" to="/about">
+              <Link
+                onClick={toggleResNavbar}
+                className={`nav_link ${
+                  currentPathname === "/about"
+                    ? "bg-slate-800 text-white"
+                    : "text-gray-300 bg-slate-950"
+                } `}
+                to="/about"
+              >
                 AboutUs
               </Link>
             </li>

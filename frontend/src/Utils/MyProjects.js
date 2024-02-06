@@ -12,6 +12,12 @@ export const projectsArray = [
         repo: "https://github.com/LokeshwarPrasad3/Attendance-Management-WebApp",
     },
     {
+        title: "Smart Canteen Project",
+        src: "./projects/smart-canteen.png",
+        live_link: "https://canteen-webapp.netlify.app/",
+        repo: "https://github.com/LokeshwarPrasad3/Attendance-Management-WebApp",
+    },
+    {
         title: "Real-Time Weather App",
         src: "./projects/real-time-weather.jpg",
         live_link: "https://real-time-weather-webapp.onrender.com/",

@@ -10,7 +10,7 @@ const MessageSendingForm = () => {
   return (
     <>
       <div className="message_send_container w-full flex justify-center my-4 mb-14 items-center font-overpass">
-        <div class="login-box ">
+        <div className="login-box ">
           <h2 className="text-xl">
             <ion-icon
               name="chatbubble-ellipses-outline"
@@ -20,15 +20,15 @@ const MessageSendingForm = () => {
               Me
           </h2>
           <form>
-            <div class="user-box">
+            <div className="user-box">
               <input type="text" name="" required="" placeholder="Your Name" />
               {/* <label className="text-xl" >Your Name</label> */}
             </div>
-            <div class="user-box">
+            <div className="user-box">
               <input type="text" name="" required="" placeholder="Your Email" />
               {/* <label className="text-xl" >Email</label> */}
             </div>
-            <div class="user-box">
+            <div className="user-box">
               <input type="text" name="" required="" placeholder="Message" />
               {/* <label className="text-xl" >Message</label> */}
             </div>

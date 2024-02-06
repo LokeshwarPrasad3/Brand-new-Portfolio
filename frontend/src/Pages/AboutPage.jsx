@@ -11,19 +11,30 @@ const AboutPage = () => {
               alt="Profile"
               className="rounded-full mx-auto mb-4"
               style={{ width: "150px", height: "150px" }}
+              loading="lazy"
             />
             <h1 className="text-3xl font-bold mb-2">
               LOKESHWAR PRASAD DEWANGAN
             </h1>
             <p>
               Email:{" "}
-              <a href="mailto:lokeshwar.prasad.cse@gmail.com">
+              <a
+                className="about_links"
+                href="mailto:lokeshwar.prasad.cse@gmail.com"
+              >
                 lokeshwar.prasad.cse@gmail.com
               </a>{" "}
-              | GitHub: <a href="your-github-link">GitHub-Link</a> | Phone:
-              (+91) 7879431869
+              |&nbsp;
+              <a className="about_links" href="your-github-link">
+                GitHub-Link
+              </a>{" "}
             </p>
-            <a className="text-blue-400 shadow-sm shadow-gray-500" href="./data/Resume-of-Lokeshwar-Prasad.pdf">Download Resume</a>
+            <a
+              className="text-blue-400 shadow-sm shadow-gray-500"
+              href="./data/Resume-of-Lokeshwar-Prasad.pdf"
+            >
+              Download Resume
+            </a>
           </div>
 
           <div className="mt-8">
@@ -44,24 +55,61 @@ const AboutPage = () => {
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">IMPORTANT LINKS</h2>
             <p>
-              Coding Profile: <a href="your-codingninja-link">CodingNinjas</a> |
-              Leetcode: <a href="your-leetcode-link">Leetcode</a> |
-              Geeksforgeeks: <a href="your-geeksforgeeks-link">Geeksforgeeks</a>
+              Coding Profile:{" "}
+              <a
+                className="about_links"
+                href="https://www.codingninjas.com/studio/profile/lokeshwar_cse"
+              >
+                CodingNinjas
+              </a>{" "}
+              |
+              <a
+                className="about_links"
+                href="https://leetcode.com/lokeshwarprasad/"
+              >
+                &nbsp;Leetcode
+              </a>{" "}
+              |
+              <a
+                className="about_links"
+                href="https://auth.geeksforgeeks.org/user/lokeshwarprasad1/"
+              >
+                &nbsp;Geeksforgeeks
+              </a>
             </p>
             <p>
-              Portfolio with JS Projects:{" "}
-              <a href="your-portfolio-link">Portfolio-with-JS-Projects</a> |
-              Linkedin Profile:{" "}
-              <a href="your-linkedin-link">Linkedin-Profile</a>
+              <a
+                className="about_links"
+                href="https://lokeshwar-creatives.netlify.app/"
+              >
+                Portfolio-Website
+              </a>{" "}
+              |&nbsp;
+              <a
+                className="about_links"
+                href="https://www.linkedin.com/in/lokeshwar-prasad-dewangan-7b2163211/"
+              >
+                Linkedin-Profile
+              </a>
             </p>
           </div>
 
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">PROJECTS</h2>
             <p>
-              <strong>REAL-TIME-CHAT-WEBAPP</strong> | Oct 2023 | Live-Link:{" "}
-              <a href="your-live-link">Live-Link</a> | GitHub-Link:{" "}
-              <a href="your-github-link">GitHub-Link</a>
+              <strong>REAL-TIME-CHAT-WEBAPP</strong> | Oct 2023 |
+              <a
+                className="about_links"
+                href="https://lokeshwar-chat-web-app.onrender.com/"
+              >
+                &nbsp;Live-Link&nbsp;
+              </a>
+              <a
+                className="about_links"
+                href="https://github.com/LokeshwarPrasad3/Real-Time-ChatApp"
+              >
+                |&nbsp;GitHub-Link
+              </a>
             </p>
             <ul className="list-disc list-inside ml-4">
               <li>
@@ -81,7 +129,12 @@ const AboutPage = () => {
 
             <p>
               <strong>ATTENDENCE SYSTEM WEBAPP</strong> | Oct 2023 |
-              GitHub-Link: <a href="your-github-link">GitHub-Link</a>
+              <a
+                className="about_links"
+                href="https://github.com/LokeshwarPrasad3/Attendance-Management-WebApp"
+              >
+                &nbsp;GitHub-Link&nbsp;
+              </a>
             </p>
             <ul className="list-disc list-inside ml-4">
               <li>
@@ -100,9 +153,20 @@ const AboutPage = () => {
             <br />
             <p>
               <strong>SMART CANTEEN (College Group Project)</strong> | Dec 2022
-              | MyCreativeDesign-Link:{" "}
-              <a href="your-design-link">MyCreativeDesign-Link</a> |
-              WebApp-Link: <a href="your-webapp-link">WebApp-Link</a>
+              |
+              <a
+                className="about_links"
+                href="https://canteen-webapp.netlify.app/"
+              >
+                &nbsp;MyCreativeDesign-Link&nbsp;
+              </a>
+              |
+              <a
+                className="about_links"
+                href="https://smartcanteen07.onrender.com/"
+              >
+                &nbsp;WebApp-Link
+              </a>
             </p>
             <ul className="list-disc list-inside ml-4">
               <li>Generate dynamic web page using DB.</li>
@@ -116,28 +180,21 @@ const AboutPage = () => {
             <p>
               <br />
               <strong>WEATHER APP using API (openweathermap.org)</strong> | Mar
-              2023 | GitHub-Link: <a href="your-github-link">GitHub-Link</a> |
-              Web-Link: <a href="your-web-link">Web-Link</a>
+              2023 |
+              <a className="about_links" href="your-github-link">
+                &nbsp;GitHub-Link 
+              </a>{" "}
+              <a className="about_links" href="your-web-link">
+                | Web-Link
+              </a>
             </p>
             <ul className="list-disc list-inside ml-4">
               <li>
-                Users can enter a location of their choice to get the realtime
-                weather details using an API.
+                Users can enter a location and get the realtime
+                weather with details.
               </li>
               <li>
                 Technology used: HTML, CSS, JavaScript, Node.js, HBS, Express.js
-              </li>
-            </ul>
-          </div>
-
-          <div className="mt-8">
-            <h2 className="text-xl font-semibold mb-4">EXPERIENCE</h2>
-            <p>
-              <strong>Freelancing Web technology</strong> | 2023 – Present
-            </p>
-            <ul className="list-disc list-inside ml-4">
-              <li>
-                <strong>Dewangan Rabbit Farming (MERN WebApp)</strong> | Ongoing
               </li>
             </ul>
           </div>

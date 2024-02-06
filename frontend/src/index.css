@@ -9,7 +9,7 @@ html {
   @apply transition-all duration-300 ease-in;
 }
 .nav_link {
-  @apply text-lg no-underline px-2 py-[1px] cursor-pointer text-gray-300 rounded-md transition-all duration-300 ease-in hover:bg-slate-800 hover:text-white;
+  @apply text-lg no-underline px-2 py-[1px] cursor-pointer rounded-md transition-all duration-300 ease-in;
 }
 .nav_list {
   @apply list-none flex justify-center items-center;
@@ -26,4 +26,8 @@ html {
 /* skills page css */
 .skills_box_class {
   @apply flex pt-5 justify-center items-center flex-col w-full md:w-[60%];
+}
+/* about page links */
+.about_links {
+  @apply text-blue-200 ;
 }
