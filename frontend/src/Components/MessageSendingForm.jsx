@@ -1,39 +1,72 @@
 import { useState } from "react";
 import "../CSS/MessageSendingForm.css";
 import { ToastContainer, toast } from "react-toastify";
+import Stack from "@mui/material/Stack";
+import CircularProgress from "@mui/material/CircularProgress";
 import { host } from "../Utils/APIHost";
-import axios from "axios"
+import axios from "axios";
 
 const MessageSendingForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [contactMessage, setContactMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const submitMessage = (e) => {
+  const submitMessage = async (e) => {
     e.preventDefault();
+    setLoading(true);
     if (!name.length > 5) {
-      toast.error("Name must more than 5 characters!", { autoClose: 3000 });
+      toast.error("Name must more than 5 characters!", { autoClose: 2000 });
+      setLoading(false);
       return;
     }
-    if (!email || !message) {
-      toast.error("Fill all fields!", { autoClose: 3000 });
+    if (!email || !contactMessage) {
+      toast.error("Fill all fields!", { autoClose: 2000 });
+      setLoading(false);
       return;
     }
-    console.log(`name : ${name} | email: ${email} | message : ${message}`)
+    console.log(
+      `name : ${name} | email: ${email} | contactMessage : ${contactMessage}`
+    );
+    try {
+      // post request to admin
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      const postData = { name, email, message: contactMessage };
+      const response = await axios.post(
+        `${host}/users/get-message`,
+        postData,
+        config
+      );
+      const data = response.data.data;
+      const { statusCode, success, message } = response.data;
 
-    // post request to admin
-    // const config = {
-    //   headers: {
-    //     "Accept" : "application/json"
-    //   }
-    // }
-    // const postData = { name, email, message };
-    // const { data } = axios.post(`${host}/endpoint`, postData, config)
+      if (!success) {
+        console.log("Not success");
+        toast.error("Something went wrong!", { autoClose: 2000 });
+        setLoading(false);
+        return;
+      }
 
-    toast.success("Successfully Sent", { autoClose: 3000 });
-    setName("");
-    setEmail("");
-    setMessage("");
+      // console.log(`Data is : ${data.name}`);
+      // console.log(`Data is : ${data.message}`);
+      // console.log(`Data is : ${data.email}`);
+      // console.log(`Data is : ${statusCode}`);
+      // console.log(`Data is : ${statusCode}`);
+      // console.log(`Data is : ${message}`);
+
+      toast.success("Successfully Sent", { autoClose: 2000 });
+      setName("");
+      setEmail("");
+      setContactMessage("");
+      setLoading(false);
+    } catch (error) {
+      console.log(`Something went wrong ${error}`);
+      setLoading(false);
+    }
   };
 
   return (
@@ -56,7 +89,7 @@ const MessageSendingForm = () => {
                 type="text"
                 value={name}
                 placeholder="Your Name"
-                />
+              />
             </div>
             <div className="user-box">
               <input
@@ -66,25 +99,42 @@ const MessageSendingForm = () => {
                 type="email"
                 value={email}
                 placeholder="Your Email"
-                />
+              />
             </div>
             <div className="user-box">
               <textarea
                 onChange={(e) => {
-                  setMessage(e.target.value);
+                  setContactMessage(e.target.value);
                 }}
                 id="message_box"
                 placeholder="Message"
-                value={message}
+                value={contactMessage}
               ></textarea>
             </div>
-            <button onClick={submitMessage}>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Submit
-            </button>
+            {loading ? (
+              <Stack
+                sx={{
+                  color: "grey.500",
+                  position: "relative",
+                  top: "2rem",
+                  left: "5rem",
+                }}
+                spacing={2}
+                direction="row"
+              >
+                <CircularProgress color="secondary" />
+                <CircularProgress color="success" />
+                <CircularProgress color="inherit" />
+              </Stack>
+            ) : (
+              <button onClick={submitMessage} className="w-32 h-11">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+              </button>
+            )}
           </form>
         </div>
       </div>

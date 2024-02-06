@@ -24,14 +24,13 @@ const Navbar = () => {
     // get current path and highlight navbar menu
     const pathname = window.location.pathname;
     setCurrentPathname(pathname);
-    console.log(pathname);
   }, [window.location.pathname]);
 
   useEffect(() => {
   // function set current innerWidth
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
-      console.log(window.innerWidth);
+      // console.log(window.innerWidth);
     };
     // Attach event listener for window resize
     window.addEventListener("resize", handleWindowResize);

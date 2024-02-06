@@ -5,6 +5,7 @@ import { ApiResponse } from "../utils/ApiResponse.js"
 
 const getMessageFromUser = asyncHandler(async (req, res) => {
     const { name, email, message } = req.body;
+    console.log(`Message Received : ${name} - ${email} - ${message}`)
     // validate all fields
     if (!name || !email || !message) {
         throw new ApiError(400, "All fields is required");
@@ -15,6 +16,7 @@ const getMessageFromUser = asyncHandler(async (req, res) => {
     if (!createdMessage) {
         throw new ApiError(500, "Something went wrong during save message");
     }
+    console.log("Successfully Saved Message");
     // all done then give api-response
     return res.status(201).json(
         new ApiResponse(201, createdMessage, "Message saved Successfully!")

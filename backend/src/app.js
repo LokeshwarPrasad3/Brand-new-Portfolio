@@ -5,7 +5,7 @@ import MessageRoutes from "./routes/message.routes.js"
 
 // config cors (cross origin resources service)
 app.use(cors({
-    origin: "*",
+    origin: ["https://lokeshwar-creatives.netlify.app/", "https://lokeshwar-creatives.onrender.com/"],
     credentials: true
 }))
 
