@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const AboutPage = () => {
+
+  // change title when about page
+  useEffect(() => {
+    document.title = "About Me • Lokeshwar Prasad Dewangan";
+  },[])
+
+
   return (
     <>
       <div className="bg-slate-900 text-white p-8 font-overpass">
