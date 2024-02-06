@@ -1,0 +1,45 @@
+# Dependency directories
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Optional npm cache directory
+.npm/
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv environment variables file
+.env
+
+# macOS
+.DS_Store
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Build output
+
+# Environment specific files
+.env.local
+.env.*.local
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Testing frameworks
+coverage/
