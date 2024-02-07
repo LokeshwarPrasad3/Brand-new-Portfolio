@@ -7,6 +7,7 @@ import Navbar from "./Components/Navbar";
 import ContactPage from "./Pages/ContactPage";
 import AboutPage from "./Pages/AboutPage";
 import SKillsPage from "./Pages/SKillsPage";
+import ShowMessagesPage from "./Pages/ShowMessagesPage";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/skills" element={<SKillsPage />} />
+        {/* private for admin */}
+        <Route path="/private" element={<ShowMessagesPage/>} />
       </Routes>
     </>
   );

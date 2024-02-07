@@ -4,7 +4,7 @@ import { ApiError } from "../utils/ApiError.js"
 import { ApiResponse } from "../utils/ApiResponse.js"
 import { sendMessageToUser } from "../utils/EmailSender.js"
 
-const getMessageFromUser = asyncHandler(async (req, res) => {
+const saveMessageFromUser = asyncHandler(async (req, res) => {
     const { name, email, message } = req.body;
     console.log(`Message Received : ${name} - ${email} - ${message}`)
     // validate all fields
@@ -28,4 +28,15 @@ const getMessageFromUser = asyncHandler(async (req, res) => {
     )
 })
 
-export { getMessageFromUser }
+const getAllMessages = asyncHandler(async (req, res) => {
+    const allMessages = await messageModel.find();
+    if (!allMessages) {
+        throw new ApiError(500, "Something Went Wrong");
+    }
+    console.log("ALl-Messages Sent!")
+    res.status(200).json(
+        new ApiResponse(200, allMessages, "Successfully found Data!")
+    )
+})
+
+export { saveMessageFromUser, getAllMessages }

@@ -37,11 +37,11 @@ const MessageSendingForm = () => {
       };
       const postData = { name, email, message: contactMessage };
       const response = await axios.post(
-        `${host}/users/get-message`,
+        `${host}/users/save-message`,
         postData,
         config
       );
-      const data = response.data.data;
+      const data = response.data;
       const { statusCode, success, message } = response.data;
 
       if (!success) {

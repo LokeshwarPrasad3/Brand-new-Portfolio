@@ -1,25 +1,33 @@
 import React, { useEffect } from "react";
 
 const AboutPage = () => {
-
   // change title when about page
   useEffect(() => {
     document.title = "About Me • Lokeshwar Prasad Dewangan";
-  },[])
-
+  }, []);
 
   return (
     <>
       <div className="bg-slate-900 text-white p-8 font-overpass">
         <div className="max-w-2xl mx-auto">
           <div className="text-center">
+            {/* placeholder image */}
+            <img
+              src="./images/lokeshwar-min.jpg"
+              alt="Placeholder"
+              className="rounded-full mx-auto mb-4"
+              style={{ width: "150px", height: "150px" }}
+            />
+            {/* original image show when loaded */}
             <img
               src="./images/lokeshwar.jpg"
               alt="Profile"
               className="rounded-full mx-auto mb-4"
-              style={{ width: "150px", height: "150px" }}
+              style={{ width: "150px", height: "150px", display: "none" }}
+              onload="this.style.display='block';"
               loading="lazy"
             />
+
             <h1 className="text-3xl font-bold mb-2">
               LOKESHWAR PRASAD DEWANGAN
             </h1>
@@ -189,7 +197,7 @@ const AboutPage = () => {
               <strong>WEATHER APP using API (openweathermap.org)</strong> | Mar
               2023 |
               <a className="about_links" href="your-github-link">
-                &nbsp;GitHub-Link 
+                &nbsp;GitHub-Link
               </a>{" "}
               <a className="about_links" href="your-web-link">
                 | Web-Link
@@ -197,8 +205,8 @@ const AboutPage = () => {
             </p>
             <ul className="list-disc list-inside ml-4">
               <li>
-                Users can enter a location and get the realtime
-                weather with details.
+                Users can enter a location and get the realtime weather with
+                details.
               </li>
               <li>
                 Technology used: HTML, CSS, JavaScript, Node.js, HBS, Express.js
