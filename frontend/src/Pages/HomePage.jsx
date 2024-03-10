@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import IntroSection from "../Components/IntroSection";
-import Navbar from "../Components/Navbar";
+import VisitedUser from "../Components/VisitedUser";
 
 const HomePage = () => {
   // change title when about page
@@ -9,8 +9,9 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center" >
       <IntroSection />
+      <VisitedUser/>
     </div>
   );
 };
