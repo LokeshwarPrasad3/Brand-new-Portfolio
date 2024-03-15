@@ -21,6 +21,7 @@ const ProjectBox = ({ project }) => {
           <div className="code_info flex justify-between w-full px-8 py-2">
             <Link
               to={project.repo}
+              target="_blank"
               className="text-green-500  custom-transition hover:scale-105"
             >
               <CodeIcon className="relative top-[-1px]" />
@@ -28,6 +29,7 @@ const ProjectBox = ({ project }) => {
             </Link>
             <Link
               to={project.live_link}
+              target="_blank"
               className="text-green-500 custom-transition hover:scale-105"
             >
               🔴Live
