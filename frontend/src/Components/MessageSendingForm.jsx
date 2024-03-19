@@ -71,7 +71,7 @@ const MessageSendingForm = () => {
 
   return (
     <>
-      <div className="message_send_container w-full flex justify-center my-4 mb-14 items-center font-overpass">
+      <div className="message_send_container w-full flex justify-center my-4 mb-7 items-center font-overpass flex-col gap-8">
         <div className="login-box ">
           <h2 className="text-xl">
             <ion-icon
@@ -137,6 +137,7 @@ const MessageSendingForm = () => {
             )}
           </form>
         </div>
+        <p className="text-white opacity-50 font-signika"  >You also receive acknowledgement</p>
       </div>
       <hr className="opacity-20" />
       <ToastContainer />

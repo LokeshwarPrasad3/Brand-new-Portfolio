@@ -141,7 +141,7 @@ const Navbar = () => {
                 } `}
                 to="/contact"
               >
-                ContactUs
+                Contact
               </Link>
             </li>
             <li className="nav_list">
