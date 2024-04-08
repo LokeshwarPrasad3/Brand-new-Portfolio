@@ -16,6 +16,7 @@ const VisitedUser = () => {
   }, []);
 
   const postVisiterDetails = useCallback(async () => {
+    /*
     const IpData = await showMyData();
     const {
       ipVersion,
@@ -49,7 +50,7 @@ const VisitedUser = () => {
       console.log("Empty values");
       return;
     }
-
+*/
     // console.log(IpData);
     // Post request to your server and await the JSON response
     const config = {
@@ -61,12 +62,12 @@ const VisitedUser = () => {
       `${host}/visitor/save-visitor`,
       {
         isVisited: true,
-        ipAddress,
-        countryName,
-        zipCode,
-        cityName,
-        regionName,
-        continent,
+        ipAddress:"",
+        countryName:"",
+        zipCode:"",
+        cityName:"",
+        regionName:"",
+        continent:"",
       },
       config
     );
