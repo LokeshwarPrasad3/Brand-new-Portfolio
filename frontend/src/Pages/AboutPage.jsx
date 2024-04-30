@@ -46,7 +46,7 @@ const AboutPage = () => {
             </p>
             <a
               className="text-blue-400 shadow-sm shadow-gray-500"
-              href="./data/Resume-of-Lokeshwar-Prasad.pdf"
+              href="./data/Resume-of-Lokeshwar-Prasad-Latest.pdf"
             >
               Download Resume
             </a>
