@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import "../CSS/ImageFrame.css";
 import { Link } from "react-router-dom";
 
-
 const IntroSection = () => {
   //🚀 Typing Animation
   useEffect(() => {
@@ -47,10 +46,16 @@ const IntroSection = () => {
             </p>
           </div>
           <div className="intro_buttons flex gap-8 relative top-4">
-            <Link to="/contact" className="hire_me_button main_page_button button">
+            <a
+              href="mailto:lokeshwar.prasad.cse@gmail.com"
+              className="hire_me_button main_page_button button"
+            >
               Hire Me
-            </Link>
-            <Link to="/contact" className="intro_contact_button main_page_button button">
+            </a>
+            <Link
+              to="/contact"
+              className="intro_contact_button main_page_button button"
+            >
               Message
             </Link>
           </div>

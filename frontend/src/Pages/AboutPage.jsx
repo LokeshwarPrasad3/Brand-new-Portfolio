@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+const resumePath = "./data/Resume of Lokeshwar Prasad.pdf";
 
 const AboutPage = () => {
   // change title when about page
@@ -40,13 +41,18 @@ const AboutPage = () => {
                 lokeshwar.prasad.cse@gmail.com
               </a>{" "}
               |&nbsp;
-              <a className="about_links" href="your-github-link">
+              <a
+                className="about_links"
+                href="your-github-link"
+                target="_blank"
+              >
                 GitHub-Link
               </a>{" "}
             </p>
             <a
               className="text-blue-400 shadow-sm shadow-gray-500"
-              href="./data/Resume-of-Lokeshwar-Prasad-Latest.pdf"
+              href={resumePath}
+              target="_blank"
             >
               Download Resume
             </a>
@@ -62,7 +68,7 @@ const AboutPage = () => {
               </li>
               <li>
                 B.Tech CSE | 5th Sem | Chhattisgarh Swami Vivekanand Technical
-                University - 9.3 CGPA (current)
+                University - 9 CGPA (current)
               </li>
             </ul>
           </div>
@@ -111,17 +117,26 @@ const AboutPage = () => {
 
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">PROJECTS</h2>
-            <p>
+            <a
+              className="text-blue-400 shadow-sm shadow-gray-500"
+              href={resumePath}
+              target="_blank"
+            >
+              Download Resume
+            </a>
+            {/*  <p>
               <strong>REAL-TIME-CHAT-WEBAPP</strong> | Oct 2023 |
               <a
                 className="about_links"
                 href="https://lokeshwar-chat-web-app.onrender.com/"
+                target="_blank"
               >
                 &nbsp;Live-Link&nbsp;
               </a>
               <a
                 className="about_links"
                 href="https://github.com/LokeshwarPrasad3/Real-Time-ChatApp"
+                target="_blank"
               >
                 |&nbsp;GitHub-Link
               </a>
@@ -147,6 +162,7 @@ const AboutPage = () => {
               <a
                 className="about_links"
                 href="https://github.com/LokeshwarPrasad3/Attendance-Management-WebApp"
+                target="_blank"
               >
                 &nbsp;GitHub-Link&nbsp;
               </a>
@@ -172,6 +188,7 @@ const AboutPage = () => {
               <a
                 className="about_links"
                 href="https://canteen-webapp.netlify.app/"
+                target="_blank"
               >
                 &nbsp;MyCreativeDesign-Link&nbsp;
               </a>
@@ -179,6 +196,7 @@ const AboutPage = () => {
               <a
                 className="about_links"
                 href="https://smartcanteen07.onrender.com/"
+                target="_blank"
               >
                 &nbsp;WebApp-Link
               </a>
@@ -196,10 +214,14 @@ const AboutPage = () => {
               <br />
               <strong>WEATHER APP using API (openweathermap.org)</strong> | Mar
               2023 |
-              <a className="about_links" href="your-github-link">
+              <a className="about_links" href="your-github-link"
+              target="_blank"
+              >
                 &nbsp;GitHub-Link
               </a>{" "}
-              <a className="about_links" href="your-web-link">
+              <a className="about_links" href="your-web-link"
+              target="_blank"
+              >
                 | Web-Link
               </a>
             </p>
@@ -211,7 +233,7 @@ const AboutPage = () => {
               <li>
                 Technology used: HTML, CSS, JavaScript, Node.js, HBS, Express.js
               </li>
-            </ul>
+            </ul> */}
           </div>
 
           <div className="mt-8">
@@ -225,21 +247,55 @@ const AboutPage = () => {
               TypeScript, Node.js, Express.js
             </p>
             <p>
-              <strong>DATABASE:</strong> MongoDB, MySql
+              <strong>DATABASE:</strong> MongoDB , Basic MySql
             </p>
             <p>
               <strong>Version Control System:</strong> Git and Github
+            </p>
+            <p>
+              <strong>Tools:</strong>{" "}
+              <a
+                className="text-blue-200"
+                href="https://www.figma.com/file/ahvQFk6da9DHHC1Wg6BfiY/Attendence-Management?type=design&node-id=210-82&mode=design&t=bm8KFWAmc4pbG111-0"
+                target="_blank"
+              >
+                Basic Figma
+              </a>
+              , Postman, Thunderclient
             </p>
           </div>
 
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">ACHIEVEMENTS</h2>
             <p>
-              Winner College Aavishkar Software Based Program 2023
+              Winner College Aavishkar Software Based Program 2023,2024
               (SMART-CANTEEN)
             </p>
           </div>
 
+          <div className="mt-8">
+            <h2 className="text-xl font-semibold mb-4">CERTIFICATION</h2>
+            <p>
+              NPTEL
+              <a
+                className="about_links"
+                href="https://www.credly.com/badges/7a6397fe-6533-47a2-86dc-6600aff967ce/linked_in?t=saek8x"
+              >
+                &nbsp;Certified&nbsp;
+              </a>
+                in JAVA Programming
+            </p>
+            <p>
+              IBM Skillbuild
+              <a
+                className="about_links"
+                href="https://www.credly.com/badges/7a6397fe-6533-47a2-86dc-6600aff967ce/linked_in?t=saek8x"
+              >
+                &nbsp;Certified&nbsp;
+              </a>
+              in Web Development
+            </p>
+          </div>
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">ADDITIONAL SKILLS</h2>
             <p>Team Management | Problem Solving</p>
