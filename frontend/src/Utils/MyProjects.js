@@ -1,5 +1,11 @@
 export const projectsArray = [
     {
+        title: "DSA Visualization",
+        src: "./projects/dsa-visualization.jpg",
+        live_link: "https://lokeshwar-dsa-visualize.netlify.app/",
+        repo: "https://github.com/LokeshwarPrasad3/DSA-Visualization-Project",
+    },
+    {
         title: "Chat Web App",
         src: "./projects/chat-web-app.jpg",
         live_link: "https://lokeshwar-chat-web-app.onrender.com/",
