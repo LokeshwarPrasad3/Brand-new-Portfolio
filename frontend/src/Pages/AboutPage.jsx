@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-const resumePath = "./data/Resume of Lokeshwar Prasad.pdf";
+const resumePath = "./data/Resume-of-Lokeshwar-Prasad.pdf";
 
 const AboutPage = () => {
   // change title when about page
@@ -279,11 +279,11 @@ const AboutPage = () => {
               NPTEL
               <a
                 className="about_links"
-                href="https://www.credly.com/badges/7a6397fe-6533-47a2-86dc-6600aff967ce/linked_in?t=saek8x"
+                href="https://nptel.ac.in/noc/E_Certificate/NPTEL24CS43S95270002530563039"
               >
                 &nbsp;Certified&nbsp;
               </a>
-                in JAVA Programming
+              in JAVA Programming
             </p>
             <p>
               IBM Skillbuild
