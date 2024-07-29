@@ -30,17 +30,26 @@ const VisitedUser = () => {
       config
     );
     const data = response.data;
-    console.log(data);
+    if (!data) {
+      return false;
+    }
+    const countVisitors = data.data;
+    setVisitedUsers(countVisitors);
+    return true;
   }, []);
 
   useEffect(() => {
     // cookie already exist
     const cookie = Cookies.get("uniqueVisiter");
     if (!cookie) {
+      const success = increaseVisitorCount();
+      if (!success) {
+        return new Error("error to increase visitor");
+      }
       Cookies.set("uniqueVisiter", true, { expires: 3 });
-      increaseVisitorCount();
+    } else {
+      getVisitersCount();
     }
-    getVisitersCount();
   }, []);
 
   return (
