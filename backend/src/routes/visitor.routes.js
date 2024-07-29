@@ -1,9 +1,9 @@
 import { Router } from "express";
 const router = Router();
-import { saveNewVisitor, getAllVisitor } from "../controllers/visitor.controllers.js"
+import { getVisitorsCount, incrementVisitorCount } from "../controllers/visitor.controllers.js"
 
-router.route("/save-visitor").post(saveNewVisitor);
-router.route("/get-visitors").get(getAllVisitor);
+router.route("/increasement-visitor").post(incrementVisitorCount);
+router.route("/get-visitors-count").get(getVisitorsCount);
 
 
 export default router;

@@ -14,7 +14,6 @@ const visitorDetails = new Schema({
 })
 
 const visitorSchema = new Schema({
-    visitors: [visitorDetails],
     totalVisitors: {
         type: Number,
         required: true,

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { showMyData } from "../Utils/GetVisitedUserInfo";
+// import { showMyData } from "../Utils/GetVisitedUserInfo";
 import axios from "axios";
 import { host } from "../Utils/APIHost";
 import Cookies from "js-cookie";
@@ -7,51 +7,15 @@ import Cookies from "js-cookie";
 const VisitedUser = () => {
   const [visitedUsers, setVisitedUsers] = useState("-");
 
-  const getVisiters = useCallback(async () => {
-    const response = await axios.get(`${host}/visitor/get-visitors`);
-    const data = response.data;
-    // console.log(data.data);
-    const totalVisit = data.data[0].totalVisitors + 1;
-    setVisitedUsers(totalVisit);
+  // get current visitors
+  const getVisitersCount = useCallback(async () => {
+    const { data } = await axios.get(`${host}/visitor/get-visitors-count`);
+    // console.log("data", data);
+    const countVisitors = data.data;
+    setVisitedUsers(countVisitors);
   }, []);
 
-  const postVisiterDetails = useCallback(async () => {
-    /*
-    const IpData = await showMyData();
-    const {
-      ipVersion,
-      ipAddress,
-      latitude,
-      longitude,
-      countryName,
-      countryCode,
-      timeZone,
-      zipCode,
-      cityName,
-      regionName,
-      continent,
-    } = IpData;
-
-    // check that not be empty
-    if (
-      !ipVersion ||
-      !ipAddress ||
-      !latitude ||
-      !longitude ||
-      !countryName ||
-      !countryCode ||
-      !timeZone ||
-      !zipCode ||
-      !cityName ||
-      !regionName ||
-      !continent
-    ) {
-      // Respond with a 400 Bad Request status and an error message
-      console.log("Empty values");
-      return;
-    }
-*/
-    // console.log(IpData);
+  const increaseVisitorCount = useCallback(async () => {
     // Post request to your server and await the JSON response
     const config = {
       headers: {
@@ -59,20 +23,14 @@ const VisitedUser = () => {
       },
     };
     const response = await axios.post(
-      `${host}/visitor/save-visitor`,
+      `${host}/visitor/increasement-visitor`,
       {
         isVisited: true,
-        ipAddress:"",
-        countryName:"",
-        zipCode:"",
-        cityName:"",
-        regionName:"",
-        continent:"",
       },
       config
     );
     const data = response.data;
-    // console.log(data);
+    console.log(data);
   }, []);
 
   useEffect(() => {
@@ -80,9 +38,9 @@ const VisitedUser = () => {
     const cookie = Cookies.get("uniqueVisiter");
     if (!cookie) {
       Cookies.set("uniqueVisiter", true, { expires: 3 });
-      postVisiterDetails();
+      increaseVisitorCount();
     }
-    getVisiters();
+    getVisitersCount();
   }, []);
 
   return (
