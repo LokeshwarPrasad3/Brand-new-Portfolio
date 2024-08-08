@@ -8,6 +8,7 @@ import ContactPage from "./Pages/ContactPage";
 import AboutPage from "./Pages/AboutPage";
 import SKillsPage from "./Pages/SKillsPage";
 import ShowMessagesPage from "./Pages/ShowMessagesPage";
+import ConfettiAnimation from "./Components/Animation/ConfettiAnimation";
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/skills" element={<SKillsPage />} />
         {/* private for admin */}
-        <Route path="/private" element={<ShowMessagesPage/>} />
+        <Route path="/private" element={<ShowMessagesPage />} />
       </Routes>
+      <ConfettiAnimation />
     </>
   );
 }
