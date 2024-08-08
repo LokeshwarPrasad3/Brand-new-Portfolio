@@ -5,8 +5,11 @@ import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
 import { host } from "../Utils/APIHost";
 import axios from "axios";
+import ConfettiButton from "./Animation/ConfettiBottom";
 
 const MessageSendingForm = () => {
+  const [showConfetti, setShowConfetti] = useState(false);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contactMessage, setContactMessage] = useState("");
@@ -57,8 +60,11 @@ const MessageSendingForm = () => {
       // console.log(`Data is : ${statusCode}`);
       // console.log(`Data is : ${statusCode}`);
       // console.log(`Data is : ${message}`);
-
       toast.success("Successfully Sent", { autoClose: 2000 });
+      setShowConfetti(true);
+      setTimeout(() => {
+        setShowConfetti(false);
+      }, [2000]);
       setName("");
       setEmail("");
       setContactMessage("");
@@ -137,10 +143,13 @@ const MessageSendingForm = () => {
             )}
           </form>
         </div>
-        <p className="text-white opacity-50 font-signika"  >You also receive acknowledgement</p>
+        <p className="text-white opacity-50 font-signika">
+          You also receive acknowledgement
+        </p>
       </div>
       <hr className="opacity-20" />
       <ToastContainer />
+      <ConfettiButton showEffect={showConfetti} />
     </>
   );
 };
