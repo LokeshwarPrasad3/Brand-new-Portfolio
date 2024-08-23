@@ -18,7 +18,7 @@ const MagicNavbar = () => {
   };
 
   return (
-    <div className="magic_navbar_container">
+    <div className="magic_navbar_container z-10">
       <div className="navigation">
         <ul>
           {listItems.map((item) => (

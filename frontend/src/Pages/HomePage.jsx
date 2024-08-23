@@ -27,7 +27,7 @@ const HomePage = () => {
           whileInView={{
             opacity: 1,
             transition: {
-              duration: 2,
+              duration: 3,
             },
           }}
           className="flex flex-col justify-center items-center"
