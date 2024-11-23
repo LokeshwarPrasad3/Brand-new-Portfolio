@@ -91,7 +91,8 @@
   .home_intro_container {
     justify-content: center;
     flex-wrap: wrap-reverse;
-    padding: 2rem;
+    padding: 0.5rem;
+    padding-top: 2rem;
     height: 100%;
     gap: 1rem;
   }
