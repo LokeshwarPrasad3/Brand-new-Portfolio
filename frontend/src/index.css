@@ -6,16 +6,16 @@ html {
   scroll-behavior: smooth;
 }
 .custom-transition {
-  @apply transition-all duration-300 ease-in;
+  @apply transition-all duration-200 ease-in;
 }
 .nav_link {
-  @apply text-lg no-underline px-2 py-[1px] cursor-pointer rounded-md transition-all duration-300 ease-in hover:bg-slate-800 hover:text-white;
+  @apply text-base font-karla no-underline px-3 py-0.5 cursor-pointer rounded-md transition-all duration-300 ease-in hover:bg-slate-800 hover:text-white;
 }
 .nav_list {
   @apply list-none flex justify-center items-center;
 }
 .main_page_button {
-  @apply bg-green-700 px-3 py-[1px] text-[1.2rem] shadow-sm custom-transition rounded shadow-blue-300 opacity-90 hover:bg-green-600 text-gray-100;
+  @apply text-white flex justify-center gap-1.5 items-center font-karla hover:scale-105 hover:bg-gradient-to-l custom-transition bg-gradient-to-r from-pink-500 to-purple-600 rounded-md px-3 py-1.5;
 }
 
 ::selection {
@@ -29,5 +29,5 @@ html {
 }
 /* about page links */
 .about_links {
-  @apply text-blue-200 ;
+  @apply text-blue-200;
 }

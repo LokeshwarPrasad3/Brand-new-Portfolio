@@ -1,11 +1,11 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from 'react';
 // import { showMyData } from "../Utils/GetVisitedUserInfo";
-import axios from "axios";
-import { host } from "../Utils/APIHost";
-import Cookies from "js-cookie";
+import axios from 'axios';
+import { host } from '../Utils/APIHost';
+import Cookies from 'js-cookie';
 
 const VisitedUser = () => {
-  const [visitedUsers, setVisitedUsers] = useState("-");
+  const [visitedUsers, setVisitedUsers] = useState('-');
 
   // get current visitors
   const getVisitersCount = useCallback(async () => {
@@ -19,7 +19,7 @@ const VisitedUser = () => {
     // Post request to your server and await the JSON response
     const config = {
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     };
     const response = await axios.post(
@@ -40,13 +40,13 @@ const VisitedUser = () => {
 
   useEffect(() => {
     // cookie already exist
-    const cookie = Cookies.get("uniqueVisiter");
+    const cookie = Cookies.get('uniqueVisiter');
     if (!cookie) {
       const success = increaseVisitorCount();
       if (!success) {
-        return new Error("error to increase visitor");
+        return new Error('error to increase visitor');
       }
-      Cookies.set("uniqueVisiter", true, { expires: 3 });
+      Cookies.set('uniqueVisiter', true, { expires: 3 });
     } else {
       getVisitersCount();
     }
@@ -54,7 +54,7 @@ const VisitedUser = () => {
 
   return (
     <>
-      <div className="visited_user_container text-gray-400 flex justify-center items-center text-md font-overpass mt-10">
+      <div className="visited_user_container font-semibold text-cyan-400 flex justify-center items-center text-md font-overpass mt-10 mb-4">
         <p className="">VISITED USERS :&nbsp;</p>
         <b>{visitedUsers}</b>
       </div>

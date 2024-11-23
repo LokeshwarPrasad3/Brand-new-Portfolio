@@ -3,6 +3,7 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
+    'prettier',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
@@ -16,10 +17,10 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    'quotes': ['error', 'backtick', 'double'],
-    'semi': ['error', 'always'],
+    quotes: ['error', 'backtick', 'double'],
+    semi: ['error', 'always'],
     'object-curly-spacing': ['error', 'always'],
     // Enforce consistent spacing before or after binary operators
     'array-bracket-spacing': ['error', 'never'],
   },
-}
+};

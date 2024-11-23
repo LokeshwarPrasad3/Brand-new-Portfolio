@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
-import CodeIcon from "@mui/icons-material/Code";
+import { Link } from 'react-router-dom';
+import CodeIcon from '@mui/icons-material/Code';
 
 const ProjectBox = ({ project }) => {
   return (
     <>
-      <div className="project_card flex flex-col text-white font-overpass w-[22rem] h-64 bg-slate-800 shadow-sm shadow-blue-700 ">
+      <div className="project_card hover:scale-105 transition-all duration-500 ease-out flex overflow-hidden flex-col text-white font-overpass w-[22rem] h-64 bg-slate-800 shadow-sm shadow-blue-700 ">
         <div className="project_image_container w-[22rem] h-48 flex justify-center items-center">
           <img
-            className="project_image w-[22rem] h-44 "
+            className="project_image transition-all duration-500 ease-out hover:scale-110 w-[22rem] h-44 "
             src={project.src}
             alt={project.title}
             loading="lazy"

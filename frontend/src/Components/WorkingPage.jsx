@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const WorkingPage = () => {
   return (
@@ -14,6 +14,6 @@ const WorkingPage = () => {
       </div>
     </>
   );
-}
+};
 
-export default WorkingPage
+export default WorkingPage;

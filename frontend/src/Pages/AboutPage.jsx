@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-const resumePath = "./data/Resume-of-Lokeshwar-Prasad.pdf";
+import React, { useEffect } from 'react';
+const resumePath = './data/Resume-of-Lokeshwar-Prasad.pdf';
 
 const AboutPage = () => {
   // change title when about page
   useEffect(() => {
-    document.title = "About Me • Lokeshwar Prasad Dewangan";
+    document.title = 'About Me • Lokeshwar Prasad Dewangan';
   }, []);
 
   return (
@@ -17,29 +17,29 @@ const AboutPage = () => {
               src="./images/lokeshwar-min.jpg"
               alt="Placeholder"
               className="rounded-full mx-auto mb-4"
-              style={{ width: "150px", height: "150px" }}
+              style={{ width: '150px', height: '150px' }}
             />
             {/* original image show when loaded */}
             <img
               src="./images/lokeshwar.jpg"
               alt="Profile"
               className="rounded-full mx-auto mb-4"
-              style={{ width: "150px", height: "150px", display: "none" }}
+              style={{ width: '150px', height: '150px', display: 'none' }}
               onload="this.style.display='block';"
               loading="lazy"
             />
 
-            <h1 className="text-3xl font-bold mb-2">
+            <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-pink-500 to-yellow-500 text-transparent bg-clip-text">
               LOKESHWAR PRASAD DEWANGAN
             </h1>
             <p>
-              Email:{" "}
+              Email:{' '}
               <a
                 className="about_links"
                 href="mailto:lokeshwar.prasad.cse@gmail.com"
               >
                 lokeshwar.prasad.cse@gmail.com
-              </a>{" "}
+              </a>{' '}
               |&nbsp;
               <a
                 className="about_links"
@@ -47,7 +47,7 @@ const AboutPage = () => {
                 target="_blank"
               >
                 GitHub-Link
-              </a>{" "}
+              </a>{' '}
             </p>
             <a
               className="text-blue-400 shadow-sm shadow-gray-500"
@@ -76,20 +76,20 @@ const AboutPage = () => {
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">IMPORTANT LINKS</h2>
             <p>
-              Coding Profile:{" "}
+              Coding Profile:{' '}
               <a
                 className="about_links"
                 href="https://www.codingninjas.com/studio/profile/lokeshwar_cse"
               >
                 CodingNinjas
-              </a>{" "}
+              </a>{' '}
               |
               <a
                 className="about_links"
                 href="https://leetcode.com/lokeshwarprasad/"
               >
                 &nbsp;Leetcode
-              </a>{" "}
+              </a>{' '}
               |
               <a
                 className="about_links"
@@ -104,7 +104,7 @@ const AboutPage = () => {
                 href="https://lokeshwar-creatives.netlify.app/"
               >
                 Portfolio-Website
-              </a>{" "}
+              </a>{' '}
               |&nbsp;
               <a
                 className="about_links"
@@ -253,7 +253,7 @@ const AboutPage = () => {
               <strong>Version Control System:</strong> Git and Github
             </p>
             <p>
-              <strong>Tools:</strong>{" "}
+              <strong>Tools:</strong>{' '}
               <a
                 className="text-blue-200"
                 href="https://www.figma.com/file/ahvQFk6da9DHHC1Wg6BfiY/Attendence-Management?type=design&node-id=210-82&mode=design&t=bm8KFWAmc4pbG111-0"

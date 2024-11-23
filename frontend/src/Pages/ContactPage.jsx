@@ -1,11 +1,11 @@
-import { useEffect } from "react";
-import MessageSendingForm from "../Components/MessageSendingForm"
-import SocialMedia from "../Components/SocialMedia"
+import { useEffect } from 'react';
+import MessageSendingForm from '../Components/MessageSendingForm';
+import SocialMedia from '../Components/SocialMedia';
 
 const ContactPage = () => {
   // change title when about page
   useEffect(() => {
-    document.title = "Contact Me • Lokeshwar Prasad Dewangan";
+    document.title = 'Contact Me • Lokeshwar Prasad Dewangan';
   }, []);
 
   return (
@@ -14,6 +14,6 @@ const ContactPage = () => {
       <SocialMedia />
     </>
   );
-}
+};
 
-export default ContactPage
+export default ContactPage;

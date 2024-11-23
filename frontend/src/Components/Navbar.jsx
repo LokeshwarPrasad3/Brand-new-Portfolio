@@ -1,11 +1,11 @@
-import "../CSS/Navbar.css";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import MagicNavbar from "./MagicNavbar";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
+import '../CSS/Navbar.css';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import MagicNavbar from './MagicNavbar';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const Navbar = () => {
   // state which store current width of window
@@ -13,7 +13,7 @@ const Navbar = () => {
   const [showResNavbar, setShowResNavbar] = useState(false);
   const [showMagicNavbar, setShowMagicNavbar] = useState(false);
   const [lightMode, setLightMode] = useState(false);
-  const [currentPathname, setCurrentPathname] = useState("/");
+  const [currentPathname, setCurrentPathname] = useState('/');
 
   //
   const toggleResNavbar = () => {
@@ -27,17 +27,17 @@ const Navbar = () => {
   }, [window.location.pathname]);
 
   useEffect(() => {
-  // function set current innerWidth
+    // function set current innerWidth
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
       // console.log(window.innerWidth);
     };
     // Attach event listener for window resize
-    window.addEventListener("resize", handleWindowResize);
+    window.addEventListener('resize', handleWindowResize);
 
     // Clean up the event listener when the component is unmounted
     return () => {
-      window.removeEventListener("resize", handleWindowResize);
+      window.removeEventListener('resize', handleWindowResize);
     };
   }, [windowWidth]);
 
@@ -85,18 +85,18 @@ const Navbar = () => {
         <div
           id="navbar_menu"
           className={`${
-            showResNavbar ? "left-[0%]" : "left-[-100%]"
+            showResNavbar ? 'left-[0%]' : 'left-[-100%]'
           } flex items-center transition-all duration-300 ease-linear`}
         >
-          <ul id="nav_ul" className="flex font-signika gap-3">
+          <ul id="nav_ul" className="flex font-overpass gap-0.5">
             <li className="nav_list">
               <Link
                 onClick={toggleResNavbar}
                 className={`nav_link 
               ${
-                currentPathname === "/"
-                  ? "bg-slate-800 text-white"
-                  : "text-gray-300 bg-slate-950"
+                currentPathname === '/'
+                  ? 'bg-slate-600 text-white'
+                  : 'text-gray-300 bg-slate-950'
               } `}
                 to="/"
               >
@@ -108,9 +108,9 @@ const Navbar = () => {
                 onClick={toggleResNavbar}
                 className={`nav_link 
                 ${
-                  currentPathname === "/projects"
-                    ? "bg-slate-800 text-white"
-                    : "text-gray-300 bg-slate-950"
+                  currentPathname === '/projects'
+                    ? 'bg-slate-600 text-white'
+                    : 'text-gray-300 bg-slate-950'
                 } `}
                 to="/projects"
               >
@@ -122,9 +122,9 @@ const Navbar = () => {
                 onClick={toggleResNavbar}
                 className={`nav_link 
               ${
-                currentPathname === "/skills"
-                  ? "bg-slate-800 text-white"
-                  : "text-gray-300 bg-slate-950"
+                currentPathname === '/skills'
+                  ? 'bg-slate-600 text-white'
+                  : 'text-gray-300 bg-slate-950'
               } `}
                 to="/skills"
               >
@@ -135,9 +135,9 @@ const Navbar = () => {
               <Link
                 onClick={toggleResNavbar}
                 className={`nav_link ${
-                  currentPathname === "/contact"
-                    ? "bg-slate-800 text-white"
-                    : "text-gray-300 bg-slate-950"
+                  currentPathname === '/contact'
+                    ? 'bg-slate-600 text-white'
+                    : 'text-gray-300 bg-slate-950'
                 } `}
                 to="/contact"
               >
@@ -148,9 +148,9 @@ const Navbar = () => {
               <Link
                 onClick={toggleResNavbar}
                 className={`nav_link ${
-                  currentPathname === "/about"
-                    ? "bg-slate-800 text-white"
-                    : "text-gray-300 bg-slate-950"
+                  currentPathname === '/about'
+                    ? 'bg-slate-600 text-white'
+                    : 'text-gray-300 bg-slate-950'
                 } `}
                 to="/about"
               >
@@ -175,20 +175,20 @@ const Navbar = () => {
         </div>
         <div
           className={`menu_button ${
-            windowWidth < 800 && !showMagicNavbar ? "block" : "hidden"
+            windowWidth < 800 && !showMagicNavbar ? 'block' : 'hidden'
           } flex justify-center items-center`}
         >
           {/* show basic menu for responsive design */}
           {showResNavbar ? (
             <CloseIcon
               onClick={toggleResNavbar}
-              style={{ fontSize: "2.2rem" }}
+              style={{ fontSize: '2.2rem' }}
               className={`absolute right-3 cursor-pointer`}
             />
           ) : (
             <MenuIcon
               onClick={toggleResNavbar}
-              style={{ fontSize: "2.2rem" }}
+              style={{ fontSize: '2.2rem' }}
               className={`absolute right-3 cursor-pointer`}
             />
           )}
