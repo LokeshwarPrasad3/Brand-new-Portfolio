@@ -9,10 +9,10 @@ html {
   @apply transition-all duration-200 ease-in;
 }
 .nav_link {
-  @apply text-base font-karla no-underline px-3 py-0.5 cursor-pointer rounded-md transition-all duration-300 ease-in hover:bg-slate-800 hover:text-white;
+  @apply text-lg md:text-base font-karla no-underline px-3 py-0.5 cursor-pointer rounded-md transition-all duration-300 ease-in hover:bg-slate-800 hover:text-white;
 }
 .nav_list {
-  @apply list-none flex justify-center items-center;
+  @apply list-none flex justify-center items-center md:border-none border-b border-gray-700 py-2;
 }
 .main_page_button {
   @apply text-white flex justify-center gap-1.5 items-center font-karla hover:scale-105 hover:bg-gradient-to-l custom-transition bg-gradient-to-r from-pink-500 to-purple-600 rounded-md px-3 py-1.5;
