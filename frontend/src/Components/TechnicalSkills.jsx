@@ -1,18 +1,20 @@
-import React from "react";
-import SkillsBox from "../Group/SkillsBox";
+import React from 'react';
+import SkillsBox from '../Group/SkillsBox';
 import {
   programmingLangArray,
   webTechnologiesArray,
   databaseArray,
   versionControlArray,
-} from "../Utils/Skills";
+} from '../Utils/Skills';
 
 const TechnicalSkills = () => {
   return (
     <>
       <div className="skill_page_container text-white flex flex-col items-center justify-center py-5 pb-14 font-overpass">
-        <h2 className="text-xl font-semibold">Technical Skills</h2>
-        <div className="underline_design w-32 md:w-44 h-[2px] bg-slate-500"></div>
+        <h2 className="text-center text-xl md:text-3xl font-overpass font-bold  bg-gradient-to-r from-green-500 to-cyan-500 text-transparent bg-clip-text">
+          Technical Skills
+        </h2>
+        <div className="underline_design w-32 md:w-56 h-[2px] bg-slate-500"></div>
 
         <div className="skill_programming_lang skills_box_class ">
           <h3 className="pb-4 text-lg">Programming Languages</h3>

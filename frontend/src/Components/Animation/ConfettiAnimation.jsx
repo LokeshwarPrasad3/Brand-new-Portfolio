@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import * as confetti from "../../Utils/confetti";
+import React, { useEffect } from 'react';
+import * as confetti from '../../Utils/confetti';
 
 const ConfettiAnimation = () => {
   useEffect(() => {

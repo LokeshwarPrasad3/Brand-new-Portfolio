@@ -1,5 +1,5 @@
-import React from "react";
-import "../CSS/SocialMedia.css";
+import React from 'react';
+import '../CSS/SocialMedia.css';
 
 const SocialMedia = () => {
   return (
@@ -7,7 +7,7 @@ const SocialMedia = () => {
       <div className="social_links_container h-28 py-5  flex justify-between items-center flex-col text-white my-2 ">
         <h2 className="font-overpass text-xl">Social Media Links</h2>
         <div className="social-icons">
-          <a 
+          <a
             href="https://github.com/LokeshwarPrasad3"
             target="_blank"
             className="social-icon social-icon--github"
@@ -15,7 +15,7 @@ const SocialMedia = () => {
             <ion-icon className="social_ion_icon" name="logo-github"></ion-icon>
             <div className="tooltip">Github</div>
           </a>
-          <a 
+          <a
             href="https://www.linkedin.com/in/lokeshwar-prasad-dewangan-7b2163211/"
             target="_blank"
             className="social-icon social-icon--linkedin"
@@ -26,7 +26,7 @@ const SocialMedia = () => {
             ></ion-icon>
             <div className="tooltip">LinkedIn</div>
           </a>
-          <a 
+          <a
             href="https://instagram.com/lokeshwarprasad3"
             target="_blank"
             className="social-icon social-icon--instagram"
@@ -37,7 +37,7 @@ const SocialMedia = () => {
             ></ion-icon>
             <div className="tooltip">Instagram</div>
           </a>
-          <a 
+          <a
             href="https://twitter.com/LokeshwarPras17"
             target="_blank"
             className="social-icon social-icon--twitter"
@@ -48,7 +48,7 @@ const SocialMedia = () => {
             ></ion-icon>
             <div className="tooltip">Twitter</div>
           </a>
-          <a 
+          <a
             href="https://www.facebook.com/lokeshwarprasad.dewangan.7/"
             target="_blank"
             className="social-icon social-icon--facebook"

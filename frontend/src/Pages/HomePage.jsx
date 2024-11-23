@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import IntroSection from "../Components/IntroSection";
-import VisitedUser from "../Components/VisitedUser";
-import { motion } from "framer-motion";
-import PreLoadPage from "./PreLoaderPage/PreLoadPage";
-import ConfettiAnimation from "../Components/Animation/ConfettiAnimation";
+import { useEffect, useState } from 'react';
+import IntroSection from '../Components/IntroSection';
+import VisitedUser from '../Components/VisitedUser';
+import { motion } from 'framer-motion';
+import PreLoadPage from './PreLoaderPage/PreLoadPage';
+import ConfettiAnimation from '../Components/Animation/ConfettiAnimation';
 
 const HomePage = () => {
   const [showMainContent, setShowMainContent] = useState(false);
@@ -16,7 +16,7 @@ const HomePage = () => {
 
   // change title when about page
   useEffect(() => {
-    document.title = "Home • Lokeshwar Prasad Dewangan";
+    document.title = 'Home • Lokeshwar Prasad Dewangan';
   }, []);
 
   return (

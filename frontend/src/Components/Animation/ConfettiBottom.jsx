@@ -1,7 +1,7 @@
 // src/ConfettiEffect.jsx
 
-import React, { useEffect } from "react";
-import confetti from "canvas-confetti";
+import React, { useEffect } from 'react';
+import confetti from 'canvas-confetti';
 
 const ConfettiEffect = ({ showEffect }) => {
   const count = 200;

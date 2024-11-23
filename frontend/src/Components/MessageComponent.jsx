@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const MessageComponent = ({ messageContent }) => {
   const { name, email, message, date } = messageContent;

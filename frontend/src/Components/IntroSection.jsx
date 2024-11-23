@@ -1,17 +1,19 @@
-import { useEffect } from "react";
-import "../CSS/ImageFrame.css";
-import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import '../CSS/ImageFrame.css';
+import { Link } from 'react-router-dom';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 const IntroSection = () => {
   //🚀 Typing Animation
   useEffect(() => {
     // Set up Typed.js when the component mounts
-    const typingText = new Typed("#text", {
+    const typingText = new Typed('#text', {
       // strings: ["Lokeshwar", "Programmer", "Designer"],
       strings: [
-        '<span class="font-bree text-[#ff2154] " >Developer</span>',
-        '<span class="font-bree text-[#7f812b] " >Programmer</span>',
-        '<span class="font-bree text-[#8c59bb] " >Designer</span>',
+        '<span class="font-bree bg-gradient-to-r from-pink-500 to-yellow-500 text-transparent bg-clip-text " >Developer</span>',
+        '<span class="font-bree bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text " >Programmer</span>',
+        '<span class="font-bree bg-gradient-to-r from-green-500 to-cyan-500 text-transparent bg-clip-text " >Engineer</span>',
       ],
       loop: true,
       typeSpeed: 100,
@@ -27,10 +29,10 @@ const IntroSection = () => {
 
   return (
     <>
-      <div className="home_intro_container text-gray-300 font-signika flex w-full justify-center items-center h-[80vh] ">
+      <div className="home_intro_container text-gray-300 flex w-full justify-center items-center h-[80vh] ">
         <div className="intro_info_section flex flex-col w-[40%] gap-3 md:gap-6">
           <div className="greet relative md:top-0 top-1 ">
-            <h3 className="hey text-3xl font-bree"> Hey ,</h3>
+            <h3 className="hey text-3xl font-bree "> Hey ,</h3>
           </div>
           <div className="anime_name">
             <h2 className="anime_text text-6xl font-bree">
@@ -39,24 +41,27 @@ const IntroSection = () => {
             </h2>
           </div>
           <div className="intro_para w-full">
-            <p className="para text-xl md:w-[90%] font-signika">
-              My name is <b>Lokeshwar Prasad Dewangan.</b> I am Full Stack
-              Developer and pursuing my 3rd year of BTech Computer Science
-              branch. I am learner & spend more time on Computer technologies.
+            <p className="text-lg sm:text-left text-center md:w-[90%] font-overpass">
+              I'm <b>Lokeshwar Prasad Dewangan.</b> a Full Stack Developer
+              currently working as a UI/UX Developer. As a 4th-year BTech
+              Computer Science student, I focus on designing user-friendly
+              interfaces and building great digital experiences.
             </p>
           </div>
-          <div className="intro_buttons flex gap-8 relative top-4">
+          <div className="intro_buttons flex gap-5 relative top-4">
             <a
               href="mailto:lokeshwar.prasad.cse@gmail.com"
               className="hire_me_button main_page_button button"
             >
-              Hire Me
+              <AccountBoxIcon style={{ fontSize: '18px' }} />
+              <span>Hire Me</span>
             </a>
             <Link
               to="/contact"
               className="intro_contact_button main_page_button button"
             >
-              Message
+              <MailOutlineIcon style={{ fontSize: '18px' }} />
+              <span>Message</span>
             </Link>
           </div>
         </div>

@@ -1,30 +1,30 @@
-import { useState } from "react";
-import "../CSS/MessageSendingForm.css";
-import { ToastContainer, toast } from "react-toastify";
-import Stack from "@mui/material/Stack";
-import CircularProgress from "@mui/material/CircularProgress";
-import { host } from "../Utils/APIHost";
-import axios from "axios";
-import ConfettiButton from "./Animation/ConfettiBottom";
+import { useState } from 'react';
+import '../CSS/MessageSendingForm.css';
+import { ToastContainer, toast } from 'react-toastify';
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
+import { host } from '../Utils/APIHost';
+import axios from 'axios';
+import ConfettiButton from './Animation/ConfettiBottom';
 
 const MessageSendingForm = () => {
   const [showConfetti, setShowConfetti] = useState(false);
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [contactMessage, setContactMessage] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [contactMessage, setContactMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
   const submitMessage = async (e) => {
     e.preventDefault();
     setLoading(true);
     if (!name.length > 5) {
-      toast.error("Name must more than 5 characters!", { autoClose: 2000 });
+      toast.error('Name must more than 5 characters!', { autoClose: 2000 });
       setLoading(false);
       return;
     }
     if (!email || !contactMessage) {
-      toast.error("Fill all fields!", { autoClose: 2000 });
+      toast.error('Fill all fields!', { autoClose: 2000 });
       setLoading(false);
       return;
     }
@@ -35,7 +35,7 @@ const MessageSendingForm = () => {
       // post request to admin
       const config = {
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       };
       const postData = { name, email, message: contactMessage };
@@ -48,8 +48,8 @@ const MessageSendingForm = () => {
       const { statusCode, success, message } = response.data;
 
       if (!success) {
-        console.log("Not success");
-        toast.error("Something went wrong!", { autoClose: 2000 });
+        console.log('Not success');
+        toast.error('Something went wrong!', { autoClose: 2000 });
         setLoading(false);
         return;
       }
@@ -60,14 +60,14 @@ const MessageSendingForm = () => {
       // console.log(`Data is : ${statusCode}`);
       // console.log(`Data is : ${statusCode}`);
       // console.log(`Data is : ${message}`);
-      toast.success("Successfully Sent", { autoClose: 2000 });
+      toast.success('Successfully Sent', { autoClose: 2000 });
       setShowConfetti(true);
       setTimeout(() => {
         setShowConfetti(false);
       }, [2000]);
-      setName("");
-      setEmail("");
-      setContactMessage("");
+      setName('');
+      setEmail('');
+      setContactMessage('');
       setLoading(false);
     } catch (error) {
       console.log(`Something went wrong ${error}`);
@@ -82,7 +82,7 @@ const MessageSendingForm = () => {
           <h2 className="text-xl">
             <ion-icon
               name="chatbubble-ellipses-outline"
-              style={{ position: "relative", top: "2px", paddingRight: "4px" }}
+              style={{ position: 'relative', top: '2px', paddingRight: '4px' }}
             ></ion-icon>
             Message Me
           </h2>
@@ -120,10 +120,10 @@ const MessageSendingForm = () => {
             {loading ? (
               <Stack
                 sx={{
-                  color: "grey.500",
-                  position: "relative",
-                  top: "2rem",
-                  left: "5rem",
+                  color: 'grey.500',
+                  position: 'relative',
+                  top: '2rem',
+                  left: '5rem',
                 }}
                 spacing={2}
                 direction="row"
@@ -143,7 +143,7 @@ const MessageSendingForm = () => {
             )}
           </form>
         </div>
-        <p className="text-white opacity-50 font-signika">
+        <p className="text-white opacity-50 font-karla">
           You also receive acknowledgement
         </p>
       </div>
