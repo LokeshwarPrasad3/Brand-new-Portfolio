@@ -6,7 +6,7 @@ import VisitorRoutes from "./routes/visitor.routes.js";
 
 // config cors (cross origin resources service)
 app.use(cors({
-    origin: ["https://lokeshwar-creatives.netlify.app", "https://lokeshwar-creatives.onrender.com"],
+    origin: ["https://lokeshwar-creatives.netlify.app", "https://lokeshwardewangan.in", "http://localhost:5173"],
     // origin: "*",
     credentials: true
 }))
@@ -14,6 +14,11 @@ app.use(cors({
 // accept data from frontend
 app.use(express.json({ limit: "16kb" }))
 app.use(express.urlencoded({ extended: true, limit: "16kb" }))
+
+
+app.get("/", (req, res) => {
+    res.send("Hello world from backend!!")
+})
 
 // api endpoint for users
 app.use("/api/v1/users", MessageRoutes)
