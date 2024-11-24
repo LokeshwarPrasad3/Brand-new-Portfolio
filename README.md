@@ -34,7 +34,7 @@ Visit my portfolio website at [https://lokeshwar-creatives.netlify.app/](https:/
 
 ## Home Page Screenshot
 
-![Home Page Screenshot](frontend/public/images/screenshots/homepage.jpg)
+![Home Page Screenshot](frontend/public/images/screenshots/homepage.png)
 
 ## Connect With Me
 
