@@ -20,7 +20,7 @@ export const webTechnologiesArray = [
 
 export const databaseArray = [
   { title: 'MongoDB', src: './skills/mongodb.png' },
-  { title: 'MYSQL', src: './skills/mysql.png' },
+  { title: 'MYSQL(basic)', src: './skills/mysql.png' },
 ];
 
 export const versionControlArray = [
