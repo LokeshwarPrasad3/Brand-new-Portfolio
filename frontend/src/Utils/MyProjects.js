@@ -12,9 +12,27 @@ export const projectsArray = [
     repo: 'https://github.com/LokeshwarPrasad3/DSA-Visualization-Project',
   },
   {
-    title: 'Chat Web App',
+    title: 'International Journal SRGI',
+    src: './projects/ijsrgi.png',
+    live_link: 'https://ijsrgi.com',
+    repo: 'https://github.com/LokeshwarPrasad3/College-Journal-Web',
+  },
+  {
+    title: 'Birthday Wish Maker',
+    src: './projects/makebirthdaywish.png',
+    live_link: 'https://makebirthday.netlify.app',
+    repo: 'https://github.com/LokeshwarPrasad3/MakeBirthdayWish',
+  },
+  {
+    title: 'Face Emotion Detector',
+    src: './projects/emotion-detector.png',
+    live_link: 'https://livefacedetect.netlify.app',
+    repo: 'https://github.com/LokeshwarPrasad3/Live-Face-Insights',
+  },
+  {
+    title: 'PingPoint',
     src: './projects/chat-web-app.jpg',
-    live_link: 'https://lokeshwar-chat-web-app.onrender.com/',
+    live_link: 'https://pingpoint.netlify.app/',
     repo: 'https://github.com/LokeshwarPrasad3/Real-Time-ChatApp',
   },
   {

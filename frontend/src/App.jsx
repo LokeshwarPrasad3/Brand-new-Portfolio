@@ -8,10 +8,12 @@ import ContactPage from './Pages/ContactPage';
 import AboutPage from './Pages/AboutPage';
 import SKillsPage from './Pages/SKillsPage';
 import ShowMessagesPage from './Pages/ShowMessagesPage';
+import CursorGlowEffect from './Components/Animation/CursorGlowEffect';
 
 function App() {
   return (
     <>
+      <CursorGlowEffect />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
