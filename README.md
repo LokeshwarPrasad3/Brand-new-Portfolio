@@ -30,7 +30,7 @@ My portfolio is thoughtfully designed to provide a comprehensive overview of my 
 
 ## Explore My Work
 
-Visit my portfolio website at [https://lokeshwar-creatives.netlify.app/](https://lokeshwar-creatives.netlify.app/) to explore my projects and gain insights into my capabilities.
+Visit my portfolio website at [https://lokeshwardewangan.in/](https://lokeshwardewangan.in/) to explore my projects and gain insights into my capabilities.
 
 ## Home Page Screenshot
 

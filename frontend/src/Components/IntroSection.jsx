@@ -41,7 +41,7 @@ const IntroSection = () => {
             </h2>
           </div>
           <div className="intro_para w-full">
-            <p className="text-lg sm:text-left text-center md:w-[90%] font-overpass">
+            <p className="text-lg sm:text-left text-center md:w-[90%] font-karla">
               I'm <b>Lokeshwar Prasad Dewangan.</b> a Full Stack Developer
               currently working as a UI/UX Developer. As a 4th-year BTech
               Computer Science student, I focus on designing user-friendly

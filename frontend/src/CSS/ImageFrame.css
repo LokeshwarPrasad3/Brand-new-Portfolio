@@ -48,10 +48,12 @@
   }
 }
 
+
 @media (max-width: 1300px) {
   .home_intro_container {
     justify-content: space-between;
     padding: 0 2rem;
+    transform: scale(0.8);
   }
   .intro_info_section {
     width: 70%;
@@ -78,6 +80,7 @@
   }
 }
 
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .frame {
@@ -95,6 +98,7 @@
     padding-top: 2rem;
     height: 100%;
     gap: 1rem;
+    transform: scale(1);
   }
   .intro_info_section {
     width: 100%;
@@ -127,3 +131,4 @@
     width: 19rem;
   }
 }
+

@@ -5,7 +5,7 @@ const SocialMedia = () => {
   return (
     <>
       <div className="social_links_container h-28 py-5  flex justify-between items-center flex-col text-white my-2 ">
-        <h2 className="font-overpass text-xl">Social Media Links</h2>
+        <h2 className="font-karla text-xl">Social Media Links</h2>
         <div className="social-icons">
           <a
             href="https://github.com/LokeshwarPrasad3"

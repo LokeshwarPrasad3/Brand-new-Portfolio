@@ -10,8 +10,8 @@ import {
 const TechnicalSkills = () => {
   return (
     <>
-      <div className="skill_page_container text-white flex flex-col items-center justify-center py-5 pb-14 font-overpass">
-        <h2 className="text-center text-xl md:text-3xl font-overpass font-bold  bg-gradient-to-r from-green-500 to-cyan-500 text-transparent bg-clip-text">
+      <div className="skill_page_container text-white flex flex-col items-center justify-center py-5 pb-14 font-karla">
+        <h2 className="text-center text-xl md:text-3xl font-karla font-bold  bg-gradient-to-r from-green-500 to-cyan-500 text-transparent bg-clip-text">
           Technical Skills
         </h2>
         <div className="underline_design w-32 md:w-56 h-[2px] bg-slate-500"></div>

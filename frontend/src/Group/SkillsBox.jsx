@@ -2,7 +2,7 @@ const SkillsBox = ({ data }) => {
   return (
     <>
       <div
-        className="skill_box flex flex-col justify-center items-center font-overpass 
+        className="skill_box flex flex-col justify-center items-center font-karla 
       w-40 pb-3 cursor-pointer overflow-hidden py-2"
       >
         <div className="image_skill h-28 w-28 overflow-hidden rounded-xl flex justify-center items-center pb-2">

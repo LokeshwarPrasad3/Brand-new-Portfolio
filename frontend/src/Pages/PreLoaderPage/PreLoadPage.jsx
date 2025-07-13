@@ -15,7 +15,7 @@ const PreLoadPage = () => {
 
   return (
     <motion.div className="preloadpage_container absolute top-0 z-50 w-screen h-screen flex justify-center items-center bg-black">
-      <div className="mid_loader_container flex flex-col justify-center items-center gap-1 font-overpass">
+      <div className="mid_loader_container flex flex-col justify-center items-center gap-1 font-karla">
         <p className="text-white text-lg">
           <span className="text-xl">{percentageValue}</span>%
         </p>

@@ -4,12 +4,12 @@ import ImageLightbox from '../Components/Lightroom/ImagePreview';
 
 const ProjectBox = ({ project }) => {
   return (
-    <div className="project_card hover:scale-105 transition-all duration-500 ease-out flex overflow-hidden flex-col text-white font-overpass w-full max-w-xs h-64 bg-slate-800 shadow-sm shadow-blue-700">
+    <div className="project_card hover:scale-105 transition-all duration-500 ease-out flex overflow-hidden flex-col text-white font-karla w-full max-w-xs h-64 bg-slate-800 shadow-sm shadow-blue-700">
 
       <ImageLightbox imageUrl={project.src} />
 
       <div className="flex flex-col justify-center items-center">
-        <p className="text-center text-xl font-overpass pt-2 pb-1">
+        <p className="text-center text-xl font-karla pt-2 pb-1">
           {project.title.slice(0, 25)}
         </p>
         <hr className="opacity-20 w-5/6" />

@@ -48,7 +48,7 @@ const Navbar = () => {
         id="navbar"
         className="navbar-container z-50 sticky top-0 h-20 shadow-md bg-slate-900 w-full max-w-full flex justify-center items-center"
       >
-        <div className='inner_navbar text-white flex justify-between items-center h-full px-10 lg:px-20 2xl:px-40 w-full' >
+        <div className='inner_navbar text-white flex justify-between items-center h-full pl-0 pr-10 lg:px-20 2xl:px-40 w-full' >
 
           <header className="flex justify-center items-center gap-2 pl-3">
             {/* <Link
@@ -89,7 +89,7 @@ const Navbar = () => {
             className={`${showResNavbar ? 'left-[0%]' : 'left-[-100%]'
               } flex items-center transition-all duration-300 ease-linear`}
           >
-            <ul id="nav_ul" className="flex font-overpass gap-1">
+            <ul id="nav_ul" className="flex font-karla gap-1">
               <li className="nav_list">
                 <Link
                   onClick={toggleResNavbar}
@@ -133,8 +133,8 @@ const Navbar = () => {
                 <Link
                   onClick={toggleResNavbar}
                   className={`nav_link ${currentPathname === '/contact'
-                      ? 'bg-slate-600 text-white'
-                      : 'text-white'
+                    ? 'bg-slate-600 text-white'
+                    : 'text-white'
                     } `}
                   to="/contact"
                 >
@@ -145,8 +145,8 @@ const Navbar = () => {
                 <Link
                   onClick={toggleResNavbar}
                   className={`nav_link ${currentPathname === '/about'
-                      ? 'bg-slate-600 text-white'
-                      : 'text-white'
+                    ? 'bg-slate-600 text-white'
+                    : 'text-white'
                     } `}
                   to="/about"
                 >

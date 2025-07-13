@@ -9,7 +9,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="bg-slate-900 text-white p-8 font-overpass">
+      <div className="bg-slate-900 text-white p-8 font-karla">
         <div className="max-w-2xl mx-auto">
           <div className="text-center">
             {/* placeholder image */}
@@ -50,7 +50,7 @@ const AboutPage = () => {
               </a>{' '}
             </p>
             <a
-              className="text-blue-400 shadow-sm shadow-gray-500"
+              className="shadow-sm shadow-gray-500 bg-gradient-to-r hover:bg-gradient-to-l from-pink-500 to-purple-600 text-white px-3 py-1 rounded-md relative top-1"
               href={resumePath}
               target="_blank"
             >
@@ -118,7 +118,7 @@ const AboutPage = () => {
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">PROJECTS</h2>
             <a
-              className="text-blue-400 shadow-sm shadow-gray-500"
+              className="shadow-sm shadow-gray-500 bg-gradient-to-r hover:bg-gradient-to-l from-pink-500 to-purple-600 text-white px-3 py-1 rounded-md relative top-1"
               href={resumePath}
               target="_blank"
             >
