@@ -5,7 +5,6 @@ import ImageLightbox from '../Components/Lightroom/ImagePreview';
 const ProjectBox = ({ project }) => {
   return (
     <div className="project_card hover:scale-105 transition-all duration-500 ease-out flex overflow-hidden flex-col text-white font-karla w-full max-w-xs h-64 bg-slate-800 shadow-sm shadow-blue-700">
-
       <ImageLightbox imageUrl={project.src} />
 
       <div className="flex flex-col justify-center items-center">

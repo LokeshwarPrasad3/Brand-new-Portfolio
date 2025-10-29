@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import MessageComponent from '../Components/MessageComponent';
 // import { temporaryMessages } from "../Utils/tempMessage";
 import axios from 'axios';
-import { toast, ToastContainer } from 'react-toastify';
+import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { host } from '../Utils/APIHost';
 
@@ -46,7 +46,6 @@ const ShowMessagesPage = () => {
           );
         })}
       </div>
-      <ToastContainer />
     </>
   );
 };

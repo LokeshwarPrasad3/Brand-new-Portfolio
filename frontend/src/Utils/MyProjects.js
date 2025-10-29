@@ -35,9 +35,7 @@ export const FullStackProjectsArray = [
     live_link: 'https://canteen-webapp.netlify.app/',
     repo: 'https://github.com/LokeshwarPrasad3/Attendance-Management-WebApp',
   },
-
-]
-
+];
 
 export const ReactFrontendProjectsArray = [
   {
@@ -70,8 +68,7 @@ export const ReactFrontendProjectsArray = [
     live_link: 'https://todo-list-lokeshwar.netlify.app/',
     repo: 'https://github.com/LokeshwarPrasad3/my-portfolio-projects/blob/main/html/My-Todo-App.html',
   },
-
-]
+];
 
 export const FrontendProjectsArray = [
   {

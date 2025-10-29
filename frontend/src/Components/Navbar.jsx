@@ -48,8 +48,7 @@ const Navbar = () => {
         id="navbar"
         className="navbar-container z-50 sticky top-0 h-20 shadow-md bg-slate-900 w-full max-w-full flex justify-center items-center"
       >
-        <div className='inner_navbar text-white flex justify-between items-center h-full pl-0 pr-10 lg:px-20 2xl:px-40 w-full' >
-
+        <div className="inner_navbar text-white flex justify-between items-center h-full pl-0 pr-10 lg:px-20 2xl:px-40 w-full">
           <header className="flex justify-center items-center gap-2 pl-3">
             {/* <Link
             to="/"
@@ -86,18 +85,20 @@ const Navbar = () => {
           {/* show navbar-menu */}
           <div
             id="navbar_menu"
-            className={`${showResNavbar ? 'left-[0%]' : 'left-[-100%]'
-              } flex items-center transition-all duration-300 ease-linear`}
+            className={`${
+              showResNavbar ? 'left-[0%]' : 'left-[-100%]'
+            } flex items-center transition-all duration-300 ease-linear`}
           >
             <ul id="nav_ul" className="flex font-karla gap-1">
               <li className="nav_list">
                 <Link
                   onClick={toggleResNavbar}
                   className={`nav_link 
-              ${currentPathname === '/'
-                      ? 'bg-slate-600 text-white'
-                      : 'text-white'
-                    } `}
+              ${
+                currentPathname === '/'
+                  ? 'bg-slate-600 text-white'
+                  : 'text-white'
+              } `}
                   to="/"
                 >
                   Home
@@ -107,10 +108,11 @@ const Navbar = () => {
                 <Link
                   onClick={toggleResNavbar}
                   className={`nav_link 
-                ${currentPathname === '/projects'
-                      ? 'bg-slate-600 text-white'
-                      : 'text-white'
-                    } `}
+                ${
+                  currentPathname === '/projects'
+                    ? 'bg-slate-600 text-white'
+                    : 'text-white'
+                } `}
                   to="/projects"
                 >
                   Projects
@@ -120,10 +122,11 @@ const Navbar = () => {
                 <Link
                   onClick={toggleResNavbar}
                   className={`nav_link 
-              ${currentPathname === '/skills'
-                      ? 'bg-slate-600 text-white'
-                      : 'text-white'
-                    } `}
+              ${
+                currentPathname === '/skills'
+                  ? 'bg-slate-600 text-white'
+                  : 'text-white'
+              } `}
                   to="/skills"
                 >
                   Skills
@@ -132,10 +135,11 @@ const Navbar = () => {
               <li className="nav_list">
                 <Link
                   onClick={toggleResNavbar}
-                  className={`nav_link ${currentPathname === '/contact'
-                    ? 'bg-slate-600 text-white'
-                    : 'text-white'
-                    } `}
+                  className={`nav_link ${
+                    currentPathname === '/contact'
+                      ? 'bg-slate-600 text-white'
+                      : 'text-white'
+                  } `}
                   to="/contact"
                 >
                   Contact
@@ -144,10 +148,11 @@ const Navbar = () => {
               <li className="nav_list">
                 <Link
                   onClick={toggleResNavbar}
-                  className={`nav_link ${currentPathname === '/about'
-                    ? 'bg-slate-600 text-white'
-                    : 'text-white'
-                    } `}
+                  className={`nav_link ${
+                    currentPathname === '/about'
+                      ? 'bg-slate-600 text-white'
+                      : 'text-white'
+                  } `}
                   to="/about"
                 >
                   AboutUs
@@ -170,8 +175,9 @@ const Navbar = () => {
             </ul>
           </div>
           <div
-            className={`menu_button ${windowWidth < 800 && !showMagicNavbar ? 'block' : 'hidden'
-              } flex justify-center items-center`}
+            className={`menu_button ${
+              windowWidth < 800 && !showMagicNavbar ? 'block' : 'hidden'
+            } flex justify-center items-center`}
           >
             {/* show basic menu for responsive design */}
             {showResNavbar ? (
@@ -206,7 +212,6 @@ const Navbar = () => {
             </Link>
           )}
         </div>
-
       </nav>
       {/* show magic navbar when enable */}
       {windowWidth < 800 && showMagicNavbar && <MagicNavbar />}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../CSS/MessageSendingForm.css';
-import { ToastContainer, toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
 import { host } from '../Utils/APIHost';
@@ -28,6 +28,15 @@ const MessageSendingForm = () => {
       setLoading(false);
       return;
     }
+
+    // Email pattern check
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      toast.error('Enter a valid email address!', { autoClose: 2000 });
+      setLoading(false);
+      return;
+    }
+
     console.log(
       `name : ${name} | email: ${email} | contactMessage : ${contactMessage}`
     );
@@ -124,6 +133,7 @@ const MessageSendingForm = () => {
                   position: 'relative',
                   top: '2rem',
                   left: '5rem',
+                  paddingBottom: '2.4rem',
                 }}
                 spacing={2}
                 direction="row"
@@ -148,7 +158,6 @@ const MessageSendingForm = () => {
         </p>
       </div>
       <hr className="opacity-20" />
-      <ToastContainer />
       <ConfettiButton showEffect={showConfetti} />
     </>
   );

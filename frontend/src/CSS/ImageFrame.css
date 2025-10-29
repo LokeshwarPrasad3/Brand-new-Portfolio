@@ -11,7 +11,7 @@
   /* Specify the animation shorthand property with multiple animations */
   animation:
     animateFrame 11s infinite,
-    animateMen 8s ease-in-out infinite;
+    animateMen 6s ease-in-out infinite;
   transition: all 0.2s ease-in-out;
 }
 .frame:hover {
@@ -48,7 +48,6 @@
   }
 }
 
-
 @media (max-width: 1300px) {
   .home_intro_container {
     justify-content: space-between;
@@ -79,7 +78,6 @@
     font-size: 1.2rem;
   }
 }
-
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
@@ -131,4 +129,3 @@
     width: 19rem;
   }
 }
-

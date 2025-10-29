@@ -9,10 +9,10 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <>
+    <div className="contactus_container h-full flex justify-center items-center flex-col min-h-[calc(100svh-80px)]">
       <MessageSendingForm />
       <SocialMedia />
-    </>
+    </div>
   );
 };
 

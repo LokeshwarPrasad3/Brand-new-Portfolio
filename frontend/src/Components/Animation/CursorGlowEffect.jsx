@@ -1,19 +1,25 @@
 import { useEffect } from 'react';
 
 const CursorGlowEffect = () => {
-    useEffect(() => {
-        // Function to update the custom property values
-        const handleMouseMove = (event) => {
-            document.documentElement.style.setProperty('--cursor-x', `${event.clientX}px`);
-            document.documentElement.style.setProperty('--cursor-y', `${event.clientY}px`);
-        };
+  useEffect(() => {
+    // Function to update the custom property values
+    const handleMouseMove = (event) => {
+      document.documentElement.style.setProperty(
+        '--cursor-x',
+        `${event.clientX}px`
+      );
+      document.documentElement.style.setProperty(
+        '--cursor-y',
+        `${event.clientY}px`
+      );
+    };
 
-        // Add the event listener
-        window.addEventListener('mousemove', handleMouseMove);
+    // Add the event listener
+    window.addEventListener('mousemove', handleMouseMove);
 
-        // Add the CSS for the body
-        const style = document.createElement('style');
-        style.innerHTML = `
+    // Add the CSS for the body
+    const style = document.createElement('style');
+    style.innerHTML = `
       body {
         background: radial-gradient(
           600px at var(--cursor-x, 1135px) var(--cursor-y, 311px),
@@ -23,17 +29,17 @@ const CursorGlowEffect = () => {
         background-color: rgb(15, 23, 42); /* slate-900 */
       }
     `;
-        document.head.appendChild(style);
+    document.head.appendChild(style);
 
-        // Clean up
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-            document.head.removeChild(style);
-        };
-    }, []);
+    // Clean up
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      document.head.removeChild(style);
+    };
+  }, []);
 
-    // This component doesn't render anything visible
-    return null;
+  // This component doesn't render anything visible
+  return null;
 };
 
 export default CursorGlowEffect;

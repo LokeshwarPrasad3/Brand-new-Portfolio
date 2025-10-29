@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import ProjectBox from '../Group/ProjectBox';
-import { FullStackProjectsArray, FrontendProjectsArray, ReactFrontendProjectsArray } from '../Utils/MyProjects';
+import {
+  FullStackProjectsArray,
+  FrontendProjectsArray,
+  ReactFrontendProjectsArray,
+} from '../Utils/MyProjects';
 
 const ProjectOverview = () => {
   return (
@@ -12,7 +16,9 @@ const ProjectOverview = () => {
           </h2>
           <div className="underline_design w-32 md:w-44 h-[2px] bg-slate-500"></div>
         </div>
-        <h2 className='text-2xl font-karla font-medium mt-3 sm:mt-0' >Full Stack Projects ✅</h2>
+        <h2 className="text-2xl font-karla font-medium mt-3 sm:mt-0">
+          Full Stack Projects ✅
+        </h2>
         <div className="all_project_container w-full flex justify-center items-center gap-10 flex-wrap py-6 ">
           {FullStackProjectsArray.map((project, index) => {
             return (
@@ -22,8 +28,10 @@ const ProjectOverview = () => {
             );
           })}
         </div>
-        <div className='w-full bg-slate-700 h-[1px] my-4 mb-7' ></div>
-        <h2 className='text-2xl font-karla font-medium' >React Frontend Projects ✅</h2>
+        <div className="w-full bg-slate-700 h-[1px] my-4 mb-7"></div>
+        <h2 className="text-2xl font-karla font-medium">
+          React Frontend Projects ✅
+        </h2>
         <div className="all_project_container w-full flex justify-center items-center gap-10 flex-wrap py-6 ">
           {ReactFrontendProjectsArray.map((project, index) => {
             return (
@@ -33,8 +41,10 @@ const ProjectOverview = () => {
             );
           })}
         </div>
-        <div className='w-full bg-slate-700 h-[1px] my-4 mb-7' ></div>
-        <h2 className='text-2xl font-karla font-medium' >Frontend JS Projects ✅</h2>
+        <div className="w-full bg-slate-700 h-[1px] my-4 mb-7"></div>
+        <h2 className="text-2xl font-karla font-medium">
+          Frontend JS Projects ✅
+        </h2>
         <div className="all_project_container w-full flex justify-center items-center gap-10 flex-wrap py-6 ">
           {FrontendProjectsArray.map((project, index) => {
             return (

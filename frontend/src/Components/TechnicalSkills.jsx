@@ -17,7 +17,7 @@ const TechnicalSkills = () => {
         <div className="underline_design w-32 md:w-56 h-[2px] bg-slate-500"></div>
 
         <div className="skill_programming_lang skills_box_class ">
-          <h3 className="pb-4 text-lg">Programming Languages</h3>
+          <h3 className="pb-4 text-lg">Programming Languages Concepts</h3>
           <div className="programming_language_container flex justify-center flex-wrap items-center ">
             {programmingLangArray.map((lang, index) => (
               <React.Fragment key={index}>

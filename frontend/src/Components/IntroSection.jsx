@@ -42,10 +42,11 @@ const IntroSection = () => {
           </div>
           <div className="intro_para w-full">
             <p className="text-lg sm:text-left text-center md:w-[90%] font-karla">
-              I'm <b>Lokeshwar Prasad Dewangan.</b> a Full Stack Developer
-              currently working as a UI/UX Developer. As a 4th-year BTech
-              Computer Science student, I focus on designing user-friendly
-              interfaces and building great digital experiences.
+              <b>Lokeshwar Prasad Dewangan </b> — Creative and dedicated Full
+              Stack Developer skilled in React, Next.js, TypeScript, Express,
+              Node.js, and MongoDB. Experienced with Docker. Passionate about
+              UI/UX and building unique digital experiences. Always exploring
+              new tech and open to impactful opportunities.
             </p>
           </div>
           <div className="intro_buttons flex gap-5 relative top-4">

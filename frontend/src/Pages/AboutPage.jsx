@@ -9,7 +9,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="bg-slate-900 text-white p-8 font-karla">
+      <div className="text-white p-8 font-karla">
         <div className="max-w-2xl mx-auto">
           <div className="text-center">
             {/* placeholder image */}
