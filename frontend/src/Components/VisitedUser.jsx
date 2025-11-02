@@ -54,7 +54,7 @@ const VisitedUser = () => {
 
   return (
     <>
-      <div className="visited_user_container font-semibold text-cyan-400 flex justify-center items-center text-md font-karla">
+      <div className="visited_user_container font-semibold text-cyan-400 flex justify-center items-center md:mt-0 mt-8 mb-2 text-md font-karla">
         <p className="">VISITED USERS :&nbsp;</p>
         <b>{visitedUsers}</b>
       </div>
